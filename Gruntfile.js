@@ -7,7 +7,7 @@ grunt.initConfig({
     options: {
       base: 'dist'
     },
-    src: ['**/*']
+    src: ['**']
   }
 
 
