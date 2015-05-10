@@ -3,12 +3,6 @@
 ### The following block runs after commit to "master" branch
 ###
 
-    # function to convert a plain .md file to one that renders nicely in gh-pages
-    function convert {
-        # sed - convert links with *.md to *.html (assumed relative links in local pages)
-        # awk - convert backtick fencing to highlights (script from bottom of file)
-        sed -e 's/(\(.*\)\.md)/(\1.html)/g' "$1" | awk -f <(sed -e '0,/^#!.*awk/d' $0) > _temp && mv _temp "$1"
-    } 
 
     if ! git show-ref --verify --quiet refs/heads/gh-pages; then
         echo "No gh-pages, so not syncing"
@@ -26,7 +20,7 @@
     git checkout master -- README.md
     if [ -f README.md ]; then
         cp README.md _includes/
-        convert _includes/README.md
+    
         git add README.md
         git add _includes/README.md
     fi
@@ -53,7 +47,7 @@
         dir=`echo ${file%/*} | sed -e "s,[^/]*,..,g"`
         cat _includes/header.txt | sed -e "s,^home: .*$,home: ${dir}/," > _temp
         cat "$file" >> _temp && mv _temp "$file"
-        convert "$file"
+    
         git add "$file"
     done
 
