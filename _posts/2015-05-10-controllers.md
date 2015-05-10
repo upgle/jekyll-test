@@ -139,7 +139,7 @@ categories: "5.0"
 
 만약 컨트롤러의 메소드가 여러개의 단어로 구성되어 진 형태라면 "-"을 통해서 접속할 수 있는 URI를 제공하게 됩니다. 예를들어 `UserController`에 다음과 같은 액션이 정의되었다면 URI는 `users/admin-profile` 과 같이 구성됩니다:
 
-	public function getAdminProfile() {}
+	public function getAdminProfile() {% raw %}{}{% endraw %}
 
 #### 라우트에 이름 지정하기
 

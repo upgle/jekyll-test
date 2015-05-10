@@ -39,13 +39,13 @@ categories: "5.0"
 
 	class MongoStore implements Illuminate\Contracts\Cache\Store {
 
-		public function get($key) {}
-		public function put($key, $value, $minutes) {}
-		public function increment($key, $value = 1) {}
-		public function decrement($key, $value = 1) {}
-		public function forever($key, $value) {}
-		public function forget($key) {}
-		public function flush() {}
+		public function get($key) {% raw %}{}{% endraw %}
+		public function put($key, $value, $minutes) {% raw %}{}{% endraw %}
+		public function increment($key, $value = 1) {% raw %}{}{% endraw %}
+		public function decrement($key, $value = 1) {% raw %}{}{% endraw %}
+		public function forever($key, $value) {% raw %}{}{% endraw %}
+		public function forget($key) {% raw %}{}{% endraw %}
+		public function flush() {% raw %}{}{% endraw %}
 
 	}
 
@@ -76,12 +76,12 @@ categories: "5.0"
 
 	class MongoHandler implements SessionHandlerInterface {
 
-		public function open($savePath, $sessionName) {}
-		public function close() {}
-		public function read($sessionId) {}
-		public function write($sessionId, $data) {}
-		public function destroy($sessionId) {}
-		public function gc($lifetime) {}
+		public function open($savePath, $sessionName) {% raw %}{}{% endraw %}
+		public function close() {% raw %}{}{% endraw %}
+		public function read($sessionId) {% raw %}{}{% endraw %}
+		public function write($sessionId, $data) {% raw %}{}{% endraw %}
+		public function destroy($sessionId) {% raw %}{}{% endraw %}
+		public function gc($lifetime) {% raw %}{}{% endraw %}
 
 	}
 
