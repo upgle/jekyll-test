@@ -392,7 +392,12 @@ $user-&gt;subscription()-&gt;decrement(5);
 <div class="highlight"><pre><code class="language-text" data-lang="text">$invoices = $user-&gt;invoices();
 </code></pre></div>
 <p>사용자의 청구서를 나열하는 경우, 청구서 관련 정보를 표시하기 위해서 헬퍼 함수를 사용할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">{{ $invoice-&gt;id }}
 
+{{ $invoice-&gt;dateString() }}
+
+{{ $invoice-&gt;dollars() }}
+</code></pre></div>
 <p><code>downloadInvoice</code> 메소드를 사용하면 청구서를 PDF 로 생성하고 다운로드 할 수 있습니다. 참 쉽죠:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return $user-&gt;downloadInvoice($invoice-&gt;id, [
     &#39;vendor&#39;  =&gt; &#39;Your Company&#39;,

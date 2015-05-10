@@ -293,7 +293,7 @@
 <p>위의 코드는 캐시-버스팅을 위해 고유한 해시값을를 파일 이름에 추가합니다. 예를들어 생성된 파일 이름은 <code>all-16d570a7.css</code>와 같이 생성될 것입니다.</p>
 
 <p>뷰 파일 안에서 해쉬된 asset를 로드하기 위해서 <code>elixir()</code> 함수를 사용할 수 있습니다. 다음은 그 예제 입니다. </p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">css</span><span class="err">/</span><span class="na">all</span><span class="err">.</span><span class="na">css</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 <p>어플리케이션 내부에서 <code>elixir()</code>함수는 로드(include) 해야하는 해시된 파일의 이름을 결정합니다. 벌써 무거운 짐을 내려놓은 것 같지 않으신가요?</p>
 
@@ -301,8 +301,8 @@
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">mix</span><span class="p">.</span><span class="nx">version</span><span class="p">([</span><span class="s2">&quot;css/all.css&quot;</span><span class="p">,</span> <span class="s2">&quot;js/app.js&quot;</span><span class="p">]);</span>
 <span class="p">});</span>
-</code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">css</span><span class="err">/</span><span class="na">all</span><span class="err">.</span><span class="na">css</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">js</span><span class="err">/</span><span class="na">app</span><span class="err">.</span><span class="na">js</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>
 <h4 id="새로운-경로에-파일-복사하기">새로운 경로에 파일 복사하기</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>

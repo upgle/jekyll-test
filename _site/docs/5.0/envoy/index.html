@@ -186,7 +186,7 @@
 
 @task(&#39;deploy&#39;, [&#39;on&#39; =&gt; &#39;web&#39;])
     cd site
-    git pull origin 
+    git pull origin {{ $branch }}
     php artisan migrate
 @endtask
 </code></pre></div>
@@ -207,7 +207,7 @@
 <p>서버에 특정 작업을 실행하기 전에 확인 메시지를 추가하고 싶은 경우에는, <code>confirm</code> 지시어를 사용할 수 있습니다 :</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">@task(&#39;deploy&#39;, [&#39;on&#39; =&gt; &#39;web&#39;, &#39;confirm&#39; =&gt; true])
     cd site
-    git pull origin 
+    git pull origin {{ $branch }}
     php artisan migrate
 @endtask
 </code></pre></div>
@@ -220,7 +220,7 @@
 
 @task(&#39;deploy&#39;, [&#39;on&#39; =&gt; [&#39;web-1&#39;, &#39;web-2&#39;]])
     cd site
-    git pull origin 
+    git pull origin {{ $branch }}
     php artisan migrate
 @endtask
 </code></pre></div>
@@ -235,7 +235,7 @@
 
 @task(&#39;deploy&#39;, [&#39;on&#39; =&gt; [&#39;web-1&#39;, &#39;web-2&#39;], &#39;parallel&#39; =&gt; true])
     cd site
-    git pull origin 
+    git pull origin {{ $branch }}
     php artisan migrate
 @endtask
 </code></pre></div>

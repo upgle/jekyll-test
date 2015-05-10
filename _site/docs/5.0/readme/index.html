@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>템플릿(Templates)</title>
+  <title>Laravel Documentation</title>
   <meta name="description" content="">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="/js/prism.js"></script>
 
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="canonical" href="http://www.xpressengine.com/docs/5.0/templates">
+  <link rel="canonical" href="http://www.xpressengine.com/docs/5.0/readme">
   <link rel="alternate" type="application/rss+xml" title="라라벨 한국어 매뉴얼" href="http://www.xpressengine.com/feed.xml" />
 </head>
 
@@ -127,141 +127,12 @@
             </section>
 
       <article class="content">
-      <h1 id="템플릿(templates)">템플릿(Templates)</h1>
+      <h1 id="laravel-documentation">Laravel Documentation</h1>
 
-<ul>
-<li><a href="#blade-templating">블레이드 템플릿</a></li>
-<li><a href="#other-blade-control-structures">기타 블레이드 컨트롤 구조</a></li>
-</ul>
+<h2 id="contribution-guidelines">Contribution Guidelines</h2>
 
-<p><a name="blade-templating"></a></p>
+<p>If you are submitting documentation for the <strong>current stable release</strong>, submit it to the corresponding branch. For example, documentation for Laravel 5.0 would be submitted to the <code>5.0</code> branch. Documentation intended for the next release of Laravel should be submitted to the <code>master</code> branch.</p>
 
-<h2 id="블레이드-템플릿">블레이드 템플릿</h2>
-
-<p>블레이드는 라라벨에서 제공하는 간단하지만 강력한 템플릿 엔진입니다. 컨트롤러 레이아웃과는 다르게 블레이드는 <em>템플릿 상속</em>과 <em>섹션</em>을 통해서 처리됩니다. 모든 블레이드 템플릿 파일은 <code>.blade.php</code> 확장자를 가져야 합니다. </p>
-
-<h4 id="블레이드-레이아웃-정의하기">블레이드 레이아웃 정의하기</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!-- Stored in resources/views/layouts/master.blade.php --&gt;
-
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;App Name - @yield(&#39;title&#39;)&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        @section(&#39;sidebar&#39;)
-            This is the master sidebar.
-        @show
-
-        &lt;div class=&quot;container&quot;&gt;
-            @yield(&#39;content&#39;)
-        &lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div>
-<h4 id="블레이드-레이아웃-사용하기">블레이드 레이아웃 사용하기</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@extends(&#39;layouts.master&#39;)
-
-@section(&#39;title&#39;, &#39;Page Title&#39;)
-
-@section(&#39;sidebar&#39;)
-    @@parent
-
-    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;
-@stop
-
-@section(&#39;content&#39;)
-    &lt;p&gt;This is my body content.&lt;/p&gt;
-@stop
-</code></pre></div>
-<p>블레이드 레이아웃을 <code>extend</code>하면 레이아웃의 섹션영역을 재지정하게 됩니다. 자식 뷰에서 부모의 콘텐츠를 포함하려면 <code>@@ parent</code> 지시문을 섹션에서 사용하면 됩니다. 주로 사이드 바 또는 하단 글 레이아웃에 내용을 추가 할 때 유용합니다.</p>
-
-<p>때로는 섹션을 정의해야할지 정확하게 판단하지 못할 수도 있는데, 이 경우에는 기본값을 <code>@yield</code>에 직접 지정할 수도 있습니다. 다음과 같이 두 번째 인자에 기본값을 지정하면 됩니다.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@yield(&#39;section&#39;, &#39;Default Content&#39;)
-</code></pre></div>
-<p><a name="other-blade-control-structures"></a></p>
-
-<h2 id="기타-블레이드-컨트롤-구조">기타 블레이드 컨트롤 구조</h2>
-
-<h4 id="데이타-출력하기">데이타 출력하기</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Hello, {{ $name }}.
-
-The current UNIX timestamp is {{ time() }}.
-</code></pre></div>
-<h4 id="데이터가-존재하는지-확인후에-출력하기">데이터가 존재하는지 확인후에 출력하기</h4>
-
-<p>때로는 변수를 출력하고자 할 때 해당 변수가 존재하는지 정확하게 알지 못할 때가 있습니다. 이런경우 여러분은 아마 다음처럼 하기를 원할 것입니다:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{{ isset($name) ? $name : &#39;Default&#39; }}
-</code></pre></div>
-<p>하지만 삼항연산자를 작성하는 대신 블레이드에서는 짧게 축약해서 표현할 수 있습니다:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{{ $name or &#39;Default&#39; }}
-</code></pre></div>
-<h4 id="중괄호를-그대로-표시하기">중괄호를 그대로 표시하기</h4>
-
-<p>중괄호로 둘러싸인 문자열을 그대로 출력 할 필요가 있는 경우에는 <code>@</code> 를 앞에 붙이는 것으로, Blade의 처리를 무시 할 수 있습니다:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@{{ This will not be processed by Blade }}
-</code></pre></div>
-<p>데이터 escape 처리를 하지 않으려면 다음과 같이 작성하면됩니다:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Hello, {!! $name !!}.
-</code></pre></div>
-<blockquote>
-<p>** 주의:** 어플리케이션의 사용자로부터 입력 된 내용을 표시 할 때에는 escape에 대한 주의가 필요합니다. 컨텐츠의 HTML 엔티티를 escape 하기위해 항상 이중 중괄호 표기법을 사용하십시오.</p>
-</blockquote>
-
-<h4 id="조건문">조건문</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@if (count($records) === 1)
-    I have one record!
-@elseif (count($records) &gt; 1)
-    I have multiple records!
-@else
-    I don&#39;t have any records!
-@endif
-
-@unless (Auth::check())
-    You are not signed in.
-@endunless
-</code></pre></div>
-<h4 id="반복">반복</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@for ($i = 0; $i &lt; 10; $i++)
-    The current value is {{ $i }}
-@endfor
-
-@foreach ($users as $user)
-    &lt;p&gt;This is user {{ $user-&gt;id }}&lt;/p&gt;
-@endforeach
-
-@forelse($users as $user)
-    &lt;li&gt;{{ $user-&gt;name }}&lt;/li&gt;
-@empty
-    &lt;p&gt;No users&lt;/p&gt;
-@endforelse
-
-@while (true)
-    &lt;p&gt;I&#39;m looping forever.&lt;/p&gt;
-@endwhile
-</code></pre></div>
-<h4 id="하위-뷰-포함하기">하위 뷰 포함하기</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@include(&#39;view.name&#39;)
-</code></pre></div>
-<p>포함하게될 하위 뷰에 데이터 배열을 전달할 수 있습니다:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@include(&#39;view.name&#39;, [&#39;some&#39; =&gt; &#39;data&#39;])
-</code></pre></div>
-<h4 id="섹션-재정의하기">섹션 재정의하기</h4>
-
-<p>섹션 전체를 다시 재정의하려면 <code>overwrite</code> 문을 사용하십시오:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@extends(&#39;list.item.container&#39;)
-
-@section(&#39;list.item.content&#39;)
-    &lt;p&gt;This is an item of type {{ $item-&gt;type }}&lt;/p&gt;
-@overwrite
-</code></pre></div>
-<h4 id="다국어에-대응-된-행-표시">다국어에 대응 된 행 표시</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">@lang(&#39;language.line&#39;)
-
-@choice(&#39;language.line&#39;, 1)
-</code></pre></div>
-<h4 id="주석">주석</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{{-- This comment will not be in the rendered HTML --}}
-</code></pre></div>
       </article>
 
     

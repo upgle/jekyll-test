@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HTTP 라우팅(HTTP Routing)</title>
+  <title>HTTP 라우팅(HTTP Routing )</title>
   <meta name="description" content="">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -195,14 +195,14 @@ Route::delete(&#39;foo/bar&#39;, function()
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;&lt;?php echo csrf_token(); ?&gt;&quot;&gt;
 </code></pre></div>
 <p>다음처럼 Blade <a href="/docs/5.0/templates">템플릿 엔진</a>을 사용할 수 있습니다.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;&quot;&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;{{ csrf_token() }}&quot;&gt;
 </code></pre></div>
 <p>일일이 수동으로 POST, PUT 또는 DELETE 요청에 대한 CSRF 토큰을 확인할 필요가 없습니다. <code>VerifyCsrfToken</code> <a href="/docs/5.0/middleware">HTTP 미들웨어</a>가 요청중인 토큰을 세션에 저장되어 있는 토큰과 일치하는지 확인할 것입니다. </p>
 
 <h4 id="x-csrf-token">X-CSRF-TOKEN</h4>
 
 <p>덧붙여 미들웨어는 &quot;POST&quot; 파라미터로 CSRF 토큰을 찾기 위해서 <code>X-CSRF-TOKEN</code> 요청 헤더(request header)도 확인합니다. 사용자는 예를 들어, &quot;메타&quot; 태그에 토큰을 저장하고 모든 요청 헤더(request header)에 추가하도록 jQuery를 설정 할 수 있습니다. </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;meta name=&quot;csrf-token&quot; content=&quot;&quot; /&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot; /&gt;
 
 $.ajaxSetup({
         headers: {

@@ -172,7 +172,7 @@ $view = view(&#39;greeting&#39;)-&gt;withName(&#39;Victoria&#39;);
 <p>필요한 경우에 <code>view</code> 헬퍼 함수에 두번째 인자로 데이터 배열을 전달할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$view = view(&#39;greetings&#39;, $data);
 </code></pre></div>
-<p>이러한 방식으로 정보를 전달할 때,<code>$data</code>는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 `<code>와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (</code>$data[&#39;$key&#39;]`는 존재한다고 가정합니다. )</p>
+<p>이러한 방식으로 정보를 전달할 때,<code>$data</code>는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 <code>{{ $key }}</code> 와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (<code>$data[&#39;$key&#39;]</code>는 존재한다고 가정합니다. )</p>
 
 <h4 id="모든-뷰에서-데이터-공유하기">모든 뷰에서 데이터 공유하기</h4>
 
