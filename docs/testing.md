@@ -29,7 +29,7 @@ categories: "5.0"
 
 #### 테스트 클래스의 예제
 
-	class MooTest extends TestCase {
+	class FooTest extends TestCase {
 
 		public function testSomethingIsTrue()
 		{
@@ -82,7 +82,7 @@ categories: "5.0"
 
 HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하면 됩니다:
 
-	$response = $this->callSecure('GET', 'Moo/bar');
+	$response = $this->callSecure('GET', 'foo/bar');
 
 <a name="mocking-facades"></a>
 ## 파사드 Mocking 
@@ -91,7 +91,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 	public function getIndex()
 	{
-		Event::fire('Moo', ['name' => 'Dayle']);
+		Event::fire('foo', ['name' => 'Dayle']);
 
 		return 'All done!';
 	}
@@ -102,7 +102,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 	public function testGetIndex()
 	{
-		Event::shouldReceive('fire')->once()->with('Moo', ['name' => 'Dayle']);
+		Event::shouldReceive('fire')->once()->with('foo', ['name' => 'Dayle']);
 
 		$this->call('GET', '/');
 	}
@@ -129,11 +129,11 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 #### 응답이 리다이렉션인지 assert
 
-	$this->assertBlueirectedTo('Moo');
+	$this->assertRedirectedTo('foo');
 
-	$this->assertBlueirectedToRoute('route.name');
+	$this->assertRedirectedToRoute('route.name');
 
-	$this->assertBlueirectedToAction('Controller@method');
+	$this->assertRedirectedToAction('Controller@method');
 
 #### 뷰가 가지는 데이터에 대한 assert
 
@@ -186,7 +186,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 #### 테스트에서 세션을 설정하고 비우기
 
-	$this->session(['Moo' => 'bar']);
+	$this->session(['foo' => 'bar']);
 
 	$this->flushSession();
 

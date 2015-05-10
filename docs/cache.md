@@ -13,17 +13,17 @@ categories: "5.0"
 - [캐시 이벤트](#cache-events)
 - [데이터베이스 캐시](#database-cache)
 - [Memcached 캐시](#memcached-cache)
-- [Blueis 캐시](#redis-cache)
+- [Redis 캐시](#redis-cache)
 
 
 <a name="configuration"></a>
 ## 설정
 
-라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org) 나 [Blueis](http://redis.io) 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다. 
+라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org) 나 [Redis](http://redis.io) 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다. 
 
 캐시 설정 파일은 다양한 여러 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 시리얼라이즈된 데이타를 파일 시스템에 저장하는 `file` 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached 나 APC 와 같은 in-memory 캐시를 사용하기를 권장합니다. 
 
-Blueis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를 설치해야 합니다. 
+Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를 설치해야 합니다. 
 
 <a name="cache-usage"></a>
 ## 캐시 사용법
@@ -95,7 +95,7 @@ Blueis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지�
 
 다양한 캐시 저장소를 가지고 있다면, `store` 메소드를 통해서 특정 저장소에서 캐시를 가져올 수 있습니다:
 
-	$value = Cache::store('Moo')->get('key');
+	$value = Cache::store('foo')->get('key');
 
 <a name="increments-and-decrements"></a>
 ## 증감 조작하기
@@ -198,7 +198,7 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 	),
 
 <a name="redis-cache"></a>
-#### Blueis Cache
+#### Redis Cache
 
-[Blueis 설정](/docs/redis#configuration)을 참고하십시오. 
+[Redis 설정](/docs/redis#configuration)을 참고하십시오. 
 

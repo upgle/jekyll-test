@@ -55,25 +55,25 @@ categories: "5.0"
 
 만약 `App\Http\Controllers` 하위에 중첩된 디렉토리를 구성하여 네임스페이스를 부여할 경우에는 단순히 `App\Http\Controllers`를 루트 네임 스페이스를 기준으로 하여 특정 클래스 이름을 사용하면 됩니다. 따라서 만약 컨트롤러가 `App\Http\Controllers\Photos\AdminController` 처럼 구성되어 있다면 다음처럼 라우트를 구성하면 됩니다. 
 
-	Route::get('Moo', 'Photos\AdminController@method');
+	Route::get('foo', 'Photos\AdminController@method');
 
 #### 이름이 지정된 컨트롤러 라우트
 
 클로저 라우트와 같이 컨트롤러 라우트에 이름을 지정할 수 있습니다. 
 
-	Route::get('Moo', ['uses' => 'MooController@method', 'as' => 'name']);
+	Route::get('foo', ['uses' => 'FooController@method', 'as' => 'name']);
 
 #### 컨트롤러 액션의 URL 구하기
 
 컨트롤러 액션에 대한 URL을 생성하기 위해서 `action` 헬퍼 함수를 사용합니다:
 
-	$url = action('App\Http\Controllers\MooController@method');
+	$url = action('App\Http\Controllers\FooController@method');
 
 단순히 컨트롤러의 전체 네임스페이스의 대신 클래스명만으로 URL 을 생성하고 싶은 경우에는 root 컨트롤러 네임스페이스를 URL 제너레이터에 등록하면 됩니다:
 
 	URL::setRootControllerNamespace('App\Http\Controllers');
 
-	$url = action('MooController@method');
+	$url = action('FooController@method');
 
 실행중인 컨트롤러 액션의 이름을 찾고자 한다면 `currentRouteAction` 메소드를 사용하면 됩니다:
 
@@ -100,9 +100,9 @@ categories: "5.0"
 		{
 			$this->middleware('auth');
 
-			$this->middleware('log', ['only' => ['MooAction', 'barAction']]);
+			$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
 
-			$this->middleware('subscribed', ['except' => ['MooAction', 'barAction']]);
+			$this->middleware('subscribed', ['except' => ['fooAction', 'barAction']]);
 		}
 
 	}

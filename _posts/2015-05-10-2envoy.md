@@ -35,7 +35,7 @@ categories: "5.0"
 
 	@servers(['web' => '192.168.1.1'])
 
-	@task('Moo', ['on' => 'web'])
+	@task('foo', ['on' => 'web'])
 		ls -la
 	@endtask
 
@@ -50,7 +50,7 @@ categories: "5.0"
 
 작업을 수행하려면 설치 한 Envoy에서 `run` 명령을 실행하십시오:
 
-	envoy run Moo
+	envoy run foo
 
 필요한 경우 명령어의 스위치를 사용하여 Envoy 파일에 변수를 전달할 수 있습니다:
 
@@ -127,11 +127,11 @@ By default, the task will be executed on each server serially. Meaning, the task
 	@servers(['web' => '192.168.1.1'])
 
 	@macro('deploy')
-		Moo
+		foo
 		bar
 	@endmacro
 
-	@task('Moo')
+	@task('foo')
 		echo "HELLO"
 	@endtask
 
@@ -153,7 +153,7 @@ By default, the task will be executed on each server serially. Meaning, the task
 
 	@servers(['web' => '192.168.1.1'])
 
-	@task('Moo', ['on' => 'web'])
+	@task('foo', ['on' => 'web'])
 		ls -la
 	@endtask
 

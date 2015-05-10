@@ -244,7 +244,7 @@ elixir(function(mix) {
 
 ```javascript
 elixir(function(mix) {
-	mix.copy('vendor/Moo/bar.css', 'public/css/bar.css');
+	mix.copy('vendor/foo/bar.css', 'public/css/bar.css');
 });
 ```
 

@@ -75,37 +75,37 @@ categories: "5.0"
 
 서비스 컨테이너에 의존성을 등록하는 방법은 클로저 콜백과 구현클래스에 인터페이스를 바인딩 하는것을 포함하여 몇가지 방법이 있습니다. 클로저를 통해서 의존성을 등록할 때에는 컨테이너에 어떤 특정 키(주로 클래스의 이름)와 함께 특정 값을 반환하는 클로저가 등록됩니다:
 
-	$this->app->bind('MooBar', function($app)
+	$this->app->bind('FooBar', function($app)
 	{
-		return new MooBar($app['SomethingElse']);
+		return new FooBar($app['SomethingElse']);
 	});
 
 #### 싱글톤으로 등록하기
 
 때로는 컨테이너에 바인딩할 대상이 한번만 수행되고 컨테이너가 여러번 호출해도 동일한 인스턴스가 반환되기를 원할 수도 있습니다. 
 
-	$this->app->singleton('MooBar', function($app)
+	$this->app->singleton('FooBar', function($app)
 	{
-		return new MooBar($app['SomethingElse']);
+		return new FooBar($app['SomethingElse']);
 	});
 
 #### 존재하는 인스턴스를 컨테이너에 바인딩하기
 
 `instance` 메소드를 사용하여 이미 존재하는 객체의 인스턴스를 컨테이너에 바인딩 할 수 있습니다. 이후 컨테이너에서 호출이 될때는 매번 주어진 인스턴스가 반환됩니다. 
 
-	$MooBar = new MooBar(new SomethingElse);
+	$fooBar = new FooBar(new SomethingElse);
 
-	$this->app->instance('MooBar', $MooBar);
+	$this->app->instance('FooBar', $fooBar);
 
 ### 의존성 해결
 
 컨테이너 밖에서 의존성 해결(바인딩한 대상을 호출하여 값을 반환받는것)을 하는데는 몇가지 방법이 있습니다. 먼저 `make` 메소드를 사용하는 것입니다:
 
-	$MooBar = $this->app->make('MooBar');
+	$fooBar = $this->app->make('FooBar');
 
 두번째로는 컨테이너가 PHP의 `ArrayAccess` 를 구현하고 있기 때문에  “배열 엑세스”를 통해서 사용하는 방법입니다:
 
-	$MooBar = $this->app['MooBar'];
+	$fooBar = $this->app['FooBar'];
 
 마지막으로 가장 중요한 방법은 컨트롤러, 이벤트 리스너, 큐 잡, 필터 그리고 다른 곳에서도 클래스의 생성자에 "타입-힌트”를 함으로써 컨테이너가 의존성을 해결할 수 있도록 하는 것입니다. 컨테이너는 자동으로 의존 객체를 주입해 줄것입니다:
 
@@ -320,9 +320,9 @@ categories: "5.0"
 		// Called when container resolves object of any type...
 	});
 
-	$this->app->resolving(function(MooBar $MooBar, $app)
+	$this->app->resolving(function(FooBar $fooBar, $app)
 	{
-		// Called when container resolves objects of type "MooBar"...
+		// Called when container resolves objects of type "FooBar"...
 	});
 
 의존성이 해결된 객체가 콜백에 전달됩니다. 

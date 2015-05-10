@@ -19,7 +19,7 @@ categories: "5.0"
 
 라라벨 큐 컴포넌트는 다양한 큐 서비스로부터 통일된 API를 제공합니다. 큐를 사용하면 이메일을 보내는 작업과 같이 시간이 소요되는 작업을 나중에 처리할 수 있습니다. 이렇게 작업을 나중에 처리함으로서 여러분의 어플리케이션은 웹 요청을 더 빠르게 처리할 수 있습니다.
 
-큐의 환경 설정 파일은 `config/queue.php`에 위치하고 있습니다. 이 파일에서 프레임워크에 포함된 database, [Beanstalkd](http://kr.github.com/beanstalkd), [IronMQ](http://iron.io), [Amazon SQS](http://aws.amazon.com/sqs), [Blueis](http://redis.io), null, 그리고 synchronous (로컬 사용을 위한)의 큐 드라이버 설정을 확인할 수 있습니다.
+큐의 환경 설정 파일은 `config/queue.php`에 위치하고 있습니다. 이 파일에서 프레임워크에 포함된 database, [Beanstalkd](http://kr.github.com/beanstalkd), [IronMQ](http://iron.io), [Amazon SQS](http://aws.amazon.com/sqs), [Redis](http://redis.io), null, 그리고 synchronous (로컬 사용을 위한)의 큐 드라이버 설정을 확인할 수 있습니다.
 
 ### 큐 데이터베이스 테이블
 
@@ -34,7 +34,7 @@ categories: "5.0"
 - Amazon SQS: `aws/aws-sdk-php`
 - Beanstalkd: `pda/pheanstalk ~3.0`
 - IronMQ: `iron-io/iron_mq`
-- Blueis: `predis/predis ~1.0`
+- Redis: `predis/predis ~1.0`
 
 <a name="basic-usage"></a>
 ## 기본 사용법
@@ -228,7 +228,7 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 	php artisan queue:subscribe queue_name queue/receive
 
-	php artisan queue:subscribe queue_name http://Moo.com/queue/receive
+	php artisan queue:subscribe queue_name http://foo.com/queue/receive
 
 이제 Iron 대시보드에 로그인하면 구독중인 URL 뿐만 아니라 새롭게 푸쉬된 작업들을 볼 수 있습니다. 주어진 큐에 여러분들이 원하는 만큼의 URL들을 구독할 수 있습니다.  이제 `queue/receive` 엔드포인트(end-point)에 새로운 라우트를 생성하고 이 라우트에서 `Queue::marshal` 메소드로부터의 응답을 반환하도록 합니다:
 

@@ -225,7 +225,7 @@ To update a model, you may retrieve it, change an attribute, and use the `save` 
 
 	$user = User::find(1);
 
-	$user->email = 'john@Moo.com';
+	$user->email = 'john@foo.com';
 
 	$user->save();
 
@@ -564,7 +564,7 @@ Now we can access the post's comments through the [dynamic property](#dynamic-pr
 
 If you need to add further constraints to which comments are retrieved, you may call the `comments` method and continue chaining conditions:
 
-	$comments = Post::find(1)->comments()->where('title', '=', 'Moo')->first();
+	$comments = Post::find(1)->comments()->where('title', '=', 'foo')->first();
 
 Again, you may override the conventional foreign key by passing a second argument to the `hasMany` method. And, like the `hasOne` relation, the local column may also be specified:
 
@@ -611,7 +611,7 @@ If you would like to use an unconventional table name for your pivot table, you 
 
 You may also override the conventional associated keys:
 
-	return $this->belongsToMany('App\Role', 'user_roles', 'user_id', 'Moo_id');
+	return $this->belongsToMany('App\Role', 'user_roles', 'user_id', 'foo_id');
 
 Of course, you may also define the inverse of the relationship on the `Role` model:
 
@@ -810,7 +810,7 @@ If you need even more power, you may use the `whereHas` and `orWhereHas` methods
 
 	$posts = Post::whereHas('comments', function($q)
 	{
-		$q->where('content', 'like', 'Moo%');
+		$q->where('content', 'like', 'foo%');
 
 	})->get();
 
@@ -1048,9 +1048,9 @@ Notice that each `Role` model we retrieve is automatically assigned a `pivot` at
 
 By default, only the keys will be present on the `pivot` object. If your pivot table contains extra attributes, you must specify them when defining the relationship:
 
-	return $this->belongsToMany('App\Role')->withPivot('Moo', 'bar');
+	return $this->belongsToMany('App\Role')->withPivot('foo', 'bar');
 
-Now the `Moo` and `bar` attributes will be accessible on our `pivot` object for the `Role` model.
+Now the `foo` and `bar` attributes will be accessible on our `pivot` object for the `Role` model.
 
 If you want your pivot table to have automatically maintained `created_at` and `updated_at` timestamps, use the `withTimestamps` method on the relationship definition:
 
@@ -1170,7 +1170,7 @@ Sometimes, you may wish to return a custom Collection object with your own added
 
 #### Defining An Accessor
 
-Eloquent provides a convenient way to transform your model attributes when getting or setting them. Simply define a `getMooAttribute` method on your model to declare an accessor. Keep in mind that the methods should follow camel-casing, even though your database columns are snake-case:
+Eloquent provides a convenient way to transform your model attributes when getting or setting them. Simply define a `getFooAttribute` method on your model to declare an accessor. Keep in mind that the methods should follow camel-casing, even though your database columns are snake-case:
 
 	class User extends Model {
 
@@ -1252,7 +1252,7 @@ Now, when you utilize the Eloquent model:
 	$options = $user->options;
 
 	// options is automatically serialized back to JSON...
-	$user->options = ['Moo' => 'bar'];
+	$user->options = ['foo' => 'bar'];
 
 <a name="model-events"></a>
 ## Model Events

@@ -51,7 +51,7 @@ Mandrill 드라이버를 사용하려면 `config/mail.php` 설정 파일에 `dri
 
 	Mail::send('emails.welcome', ['key' => 'value'], function($message)
 	{
-		$message->to('Moo@example.com', 'John Smith')->subject('Welcome!');
+		$message->to('foo@example.com', 'John Smith')->subject('Welcome!');
 	});
 
 `send` 메소드의 첫번째 인자로 이메일의 본문에 사용되는 뷰의 이름을 전달합니다. 두번째는 뷰로 전달되는 인자인데 대부분 배열의 형태로 구성되며 `$key`를 통해서 뷰에서 사용됩니다. 세번째로 전달되는 클로저는 이메일 메세지에 대한 다양한 옵션을 지정하는데 사용됩니다. 
@@ -72,7 +72,7 @@ HTML 뷰에 추가로 플레인 텍스트 뷰를 지정할 수도 있습니다:
 	{
 		$message->from('us@example.com', 'Laravel');
 
-		$message->to('Moo@example.com')->cc('bar@example.com');
+		$message->to('foo@example.com')->cc('bar@example.com');
 
 		$message->attach($pathToFile);
 	});
@@ -87,7 +87,7 @@ HTML 뷰에 추가로 플레인 텍스트 뷰를 지정할 수도 있습니다:
 	{
 		$message->from('us@example.com', 'Laravel');
 
-		$message->to('Moo@example.com')->cc('bar@example.com');
+		$message->to('foo@example.com')->cc('bar@example.com');
 	});
 
 > **주의:** `Mail::send` 클로저에 전달되는 메세지 인스턴스는 SwiftMailer 메세지 클래스를 확장하므로 이메일을 작성하는데 필요한 클래스의 메소드들를 사용할 수 있습니다. 
@@ -124,21 +124,21 @@ HTML 뷰에 추가로 플레인 텍스트 뷰를 지정할 수도 있습니다:
 
 	Mail::queue('emails.welcome', $data, function($message)
 	{
-		$message->to('Moo@example.com', 'John Smith')->subject('Welcome!');
+		$message->to('foo@example.com', 'John Smith')->subject('Welcome!');
 	});
 
 `later` 메소드를 통해서 이메일을 보낼 때까지의 초단위의 지연시간을 설정할 수도 있습니다:
 
 	Mail::later(5, 'emails.welcome', $data, function($message)
 	{
-		$message->to('Moo@example.com', 'John Smith')->subject('Welcome!');
+		$message->to('foo@example.com', 'John Smith')->subject('Welcome!');
 	});
 
 이메일 메세지를 등록하는 특정 큐 또는 “튜브”를 지정하려 한다면 `queueOn`과 `laterOn`  메소드를 사용하여 지정할 수 있습니다:
 
 	Mail::queueOn('queue-name', 'emails.welcome', $data, function($message)
 	{
-		$message->to('Moo@example.com', 'John Smith')->subject('Welcome!');
+		$message->to('foo@example.com', 'John Smith')->subject('Welcome!');
 	});
 
 <a name="mail-and-local-development"></a>

@@ -118,7 +118,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 여러 연결들을 사용할때 `DB::connection`메소드를 통해 특정 커넥션에 액세스 할 수 있습니다:
 
-	$users = DB::connection('Moo')->select(...);
+	$users = DB::connection('foo')->select(...);
 
 또한 PDO 인스턴스로 액세스 할 수 있습니다:
 
@@ -126,11 +126,11 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 때로는 주어진 데이터데이스에 다시 연결해야 할 수도 있습니다:
 
-	DB::reconnect('Moo');
+	DB::reconnect('foo');
 
 PDO인스턴스의 `max_connections`한계를 넘어서서 데이터베이스 연결을 끊어야하는경우 `disconnect`메소드를 사용하면 됩니다:
 
-	DB::disconnect('Moo');
+	DB::disconnect('foo');
 
 <a name="query-logging"></a>
 ## 쿼리 로깅

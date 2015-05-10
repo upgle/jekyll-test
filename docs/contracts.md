@@ -69,7 +69,7 @@ categories: "5.0"
 
 이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐스 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다. 
 
-또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Blueia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다. 
+또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Redia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다. 
 
 **이렇게 접근하는 대신, 특정 벤더에 구속되지 않고 단순한 인터페이스에 의존하도록 하여 코드를 개선할 수 있습니다:**
 
@@ -128,7 +128,7 @@ Contract  |  Laravel 5.x Facade
 [Illuminate\Contracts\Mail\Mailer](https://github.com/illuminate/contracts/blob/master/Mail/Mailer.php) | Mail
 [Illuminate\Contracts\Queue\Factory](https://github.com/illuminate/contracts/blob/master/Queue/Factory.php) | Queue::driver()
 [Illuminate\Contracts\Queue\Queue](https://github.com/illuminate/contracts/blob/master/Queue/Queue.php) | Queue
-[Illuminate\Contracts\Blueis\Database](https://github.com/illuminate/contracts/blob/master/Blueis/Database.php) | Blueis
+[Illuminate\Contracts\Redis\Database](https://github.com/illuminate/contracts/blob/master/Redis/Database.php) | Redis
 [Illuminate\Contracts\Routing\Registrar](https://github.com/illuminate/contracts/blob/master/Routing/Registrar.php) | Route
 [Illuminate\Contracts\Routing\ResponseFactory](https://github.com/illuminate/contracts/blob/master/Routing/ResponseFactory.php) | Response
 [Illuminate\Contracts\Routing\UrlGenerator](https://github.com/illuminate/contracts/blob/master/Routing/UrlGenerator.php) | URL
@@ -149,12 +149,12 @@ Contract  |  Laravel 5.x Facade
 
 	use App\User;
 	use App\Events\NewUserRegistered;
-	use Illuminate\Contracts\Blueis\Database;
+	use Illuminate\Contracts\Redis\Database;
 
 	class CacheUserInformation {
 
 		/**
-		 * The Blueis database implementation.
+		 * The Redis database implementation.
 		 */
 		protected $redis;
 

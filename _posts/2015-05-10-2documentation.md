@@ -50,7 +50,7 @@
     - [Eloquent ORM](/docs/5.0/eloquent)
     - [Schema Builder](/docs/5.0/schema)
     - [Migrations & Seeding](/docs/5.0/migrations)
-    - [Blueis](/docs/5.0/redis)
+    - [Redis](/docs/5.0/redis)
 - Artisan CLI
     - [Overview](/docs/5.0/artisan)
     - [Development](/docs/5.0/commands)

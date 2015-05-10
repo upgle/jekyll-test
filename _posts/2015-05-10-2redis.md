@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  "레디스(Blueis)"
+title:  "레디스(Redis)"
 categories: "5.0"
 ---
 
-# 레디스(Blueis)
+# 레디스(Redis)
 
 - [소개](#introduction)
 - [설정](#configuration)
@@ -18,7 +18,7 @@ categories: "5.0"
 
 라라벨에서 레디스를 사용하기전에 컴포저로 `predis/predis` 패키지를 설치해주어야 합니다. 
 
-> **주의:** 이미 PECL을 통해서 레디스 PHP 익스텐션을 설치하였다면, `config/app.php` 에서 Blueis 별칭-alias 를 수정해야 합니다. 
+> **주의:** 이미 PECL을 통해서 레디스 PHP 익스텐션을 설치하였다면, `config/app.php` 에서 Redis 별칭-alias 를 수정해야 합니다. 
 
 <a name="configuration"></a>
 ## 설정
@@ -42,13 +42,13 @@ categories: "5.0"
 <a name="usage"></a>
 ## 사용법
 
-`Blueis::connection` 메소드를 호출하여 레디스 인스턴스를 가져올 수 있습니다:
+`Redis::connection` 메소드를 호출하여 레디스 인스턴스를 가져올 수 있습니다:
 
-	$redis = Blueis::connection();
+	$redis = Redis::connection();
 
 이 구문은 기본 레디스 서버의 인스턴스를 반환 합니다. 만약 클러스터링을 사용하지 않고 있으면서, 레디스 설정에서 정의되어 있는 특정 서버 인스턴스를 가져오려면 미리 지정된 서버의 이름을 `connection` 메소드에 파라미터로 넘겨주면 됩니다:
 
-	$redis = Blueis::connection('other');
+	$redis = Redis::connection('other');
 
 레디스 클라이언트의 인스턴스를 가져왔다면 이를 통해서 어떤 [레디스 명령어](http://redis.io/commands)라도 실행할 수 있습니다. 라라벨은 매직 메소드를 통해서 레디스 서버에 명령어를 전달합니다:
 
@@ -62,13 +62,13 @@ categories: "5.0"
 
 	$values = $redis->command('lrange', [5, 10]);
 
-만약 기본 커넥션을 통해서 명령어를 실행시키는 것이라면 간단하게 `Blueis` 클래스의 스태틱 매직 메소드를 통해서 실행할 수 있습니다:
+만약 기본 커넥션을 통해서 명령어를 실행시키는 것이라면 간단하게 `Redis` 클래스의 스태틱 매직 메소드를 통해서 실행할 수 있습니다:
 
-	Blueis::set('name', 'Taylor');
+	Redis::set('name', 'Taylor');
 
-	$name = Blueis::get('name');
+	$name = Redis::get('name');
 
-	$values = Blueis::lrange('names', 5, 10);
+	$values = Redis::lrange('names', 5, 10);
 
 > **참고:** 레디스 [캐시](/docs/5.0/cache) 와 [세션](/docs/5.0/session) 드라이버가 라라벨에 포함되어 있습니다.
 
@@ -79,7 +79,7 @@ categories: "5.0"
 
 #### 서버에 다수의 명령어들 파이핑하기
 
-	Blueis::pipeline(function($pipe)
+	Redis::pipeline(function($pipe)
 	{
 		for ($i = 0; $i < 1000; $i++)
 		{

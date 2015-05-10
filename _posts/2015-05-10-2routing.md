@@ -29,17 +29,17 @@ categories: "5.0"
 
 #### 기타 기본 라우트
 
-	Route::post('Moo/bar', function()
+	Route::post('foo/bar', function()
 	{
 		return 'Hello World';
 	});
 
-	Route::put('Moo/bar', function()
+	Route::put('foo/bar', function()
 	{
 		//
 	});
 
-	Route::delete('Moo/bar', function()
+	Route::delete('foo/bar', function()
 	{
 		//
 	});
@@ -53,14 +53,14 @@ categories: "5.0"
 
 #### 어떠한 HTTP 메소드에도 응답하는 라우트 등록하기
 
-	Route::any('Moo', function()
+	Route::any('foo', function()
 	{
 		return 'Hello World';
 	});
 
 라우트를 위한 URL을 생성할 필요가 많은데 이때는 `url` 헬퍼 함수를 사용하면 됩니다:
 
-	$url = url('Moo');
+	$url = url('foo');
 
 <a name="csrf-protection"></a>
 ## CSRF 보호하기
@@ -95,7 +95,7 @@ categories: "5.0"
 이제 모든 AJAX 요청은 자동으로 CSRF 토큰을 포함하게 됩니다. 
 
 	$.ajax({
-	   url: "/Moo/bar",
+	   url: "/foo/bar",
 	})
 
 #### X-XSRF-TOKEN
@@ -111,7 +111,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 `_method` 필드로 보내진 값은 HTTP 요청 메소드를 구분하는데 사용됩니다. 다음 예를 참조하십시오:
 
-	<form action="/Moo/bar" method="POST">
+	<form action="/foo/bar" method="POST">
 		<input type="hidden" name="_method" value="PUT">
     	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     </form>
@@ -203,7 +203,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 <a name="named-routes"></a>
 ## 이름이 지정된 라우트
 
-이름이 지정된 라우트는 지정된 라우트에 대한 URL을 생성하거나 Blueirect를 할 때 편리함을 제공합니다. `as` 배열 키를 통해 라우트에 이름을 지정할 수 있습니다. 
+이름이 지정된 라우트는 지정된 라우트에 대한 URL을 생성하거나 Redirect를 할 때 편리함을 제공합니다. `as` 배열 키를 통해 라우트에 이름을 지정할 수 있습니다. 
 
 	Route::get('user/profile', ['as' => 'profile', function()
 	{
@@ -216,7 +216,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
         'as' => 'profile', 'uses' => 'UserController@showProfile'
 	]);
 
-이제 URL을 생성하거나 Blueirect를 하는데 라우트 이름을 사용할 수 있습니다. 
+이제 URL을 생성하거나 Redirect를 하는데 라우트 이름을 사용할 수 있습니다. 
 
 	$url = route('profile');
 
@@ -239,16 +239,16 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 라우트 그룹에 지정하는 배열의 `middleware` 값에 미들웨어의 목록을 정의함으로써 그룹내의 모든 라우트에 미들웨어가 적용됩니다. 미들웨어는 배열에 정의된 순서대로 실행될것입니다:
 
-	Route::group(['middleware' => 'Moo|bar'], function()
+	Route::group(['middleware' => 'foo|bar'], function()
 	{
 		Route::get('/', function()
 		{
-			// Has Moo And Bar Middleware
+			// Has Foo And Bar Middleware
 		});
 
 		Route::get('user/profile', function()
 		{
-			// Has Moo And Bar Middleware
+			// Has Foo And Bar Middleware
 		});
 	});
 

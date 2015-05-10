@@ -91,11 +91,11 @@ Paginator의 `appends` 메소드를 사용하면 페이지 링크에 쿼리 스�
 
 만약 “hash fragment”를 페이지 번호의 링크에 추가하고 싶다면 `fragment` 메소드를 사용하면 됩니다:
 
-	<?php echo $users->fragment('Moo')->render(); ?>
+	<?php echo $users->fragment('foo')->render(); ?>
 
 위의 예제와 같이 메소드를 사용하면 아래와 같은 형태의 URLs를 만들것입니다:
 
-	http://example.com/something?page=2#Moo
+	http://example.com/something?page=2#foo
 
 <a name="converting-to-json"></a>
 ## JSON으로 변환하기.

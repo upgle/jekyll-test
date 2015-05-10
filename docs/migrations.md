@@ -88,7 +88,7 @@ categories: "5.0"
 		{
 			DB::table('users')->delete();
 
-			User::create(['email' => 'Moo@bar.com']);
+			User::create(['email' => 'foo@bar.com']);
 		}
 
 	}

@@ -24,9 +24,9 @@ categories: "5.0"
 
 #### 새로운 명령어 클래스 생성하기
 
-	php artisan make:console MooCommand
+	php artisan make:console FooCommand
 
-이 명령어는 `app/Console/MooCommand.php`파일을 생성할 것입니다. 
+이 명령어는 `app/Console/FooCommand.php`파일을 생성할 것입니다. 
 
 명령어를 생성할 때 `--command` 옵션을 사용하면 터미널에서 사용할 명령어 이름을 지정할 수 있습니다:
 
@@ -60,11 +60,11 @@ categories: "5.0"
 	
 위의 모드는 다음의 커맨드를 허용합니다:
 
-	php artisan Moo --option=bar --option=baz
+	php artisan foo --option=bar --option=baz
 
 `VALUE_NONE` 옵션은 이 옵션이 단순히 스위치로 사용된다는 것을 나타냅니다:
 
-	php artisan Moo --option
+	php artisan foo --option
 
 ### Retrieving Input 입력값 조회하기
 
@@ -125,7 +125,7 @@ While your command is executing, you will obviously need to access the values fo
 
 때로는 해당 명령어가 다른 명령어를 호출해야할 때가 있습니다. 이 경우에 `call` 메소드를 사용하면 됩니다:
 
-	$this->call('command:name', ['argument' => 'Moo', '--option' => 'bar']);
+	$this->call('command:name', ['argument' => 'foo', '--option' => 'bar']);
 
 <a name="registering-commands"></a>
 ## 명령어 등록하기
@@ -135,7 +135,7 @@ While your command is executing, you will obviously need to access the values fo
 명령어 작성이 완료되면 명령어를 사용가능하도록 아티즌에 등록할 필요가 있습니다. 이 작업은 일반적으로 `app/Console/Kernel.php` 파일에서 이루어 집니다. 이 파일에서, 명령어들의 목록을 담고 있는 `command` 변수를 찾을 수 있을 것입니다. 여러분이 작성한 명령어를 등록하려면 해당 배열에 생성한 명령어 클래스를 추가하십시오. 
 
 	protected $commands = [
-		'App\Console\Commands\MooCommand'
+		'App\Console\Commands\FooCommand'
 	];
 
 아티즌이 구동되면서 변수내의 모든 명령어들의 목록을 참고하여 [service container](/docs/5.0/container)들이 자동으로 실행가능한 상태로 아티즌에 등록됩니다. 

@@ -42,7 +42,7 @@ categories: "5.0"
 
 스키마 작업이 진행될 위치를 지정하고자 한다면 `Schema::connection` 메소드를 사용하면 됩니다:
 
-	Schema::connection('Moo')->create('users', function($table)
+	Schema::connection('foo')->create('users', function($table)
 	{
 		$table->increments('id');
 	});
@@ -76,7 +76,7 @@ categories: "5.0"
 `$table->dateTime('created_at');`  |  테이블에 DATETIME 타입 지정
 `$table->decimal('amount', 5, 2);`  |  유효성과 크기 지정한 DECIMAL 타입 지정 
 `$table->double('column', 15, 8);`  |  전체 15자리에 소수점 8자리까지 허용가능한 DOUBLE 타입 지정
-`$table->enum('choices', ['Moo', 'bar']);` | 테이블에 ENUM 타입 지정
+`$table->enum('choices', ['foo', 'bar']);` | 테이블에 ENUM 타입 지정
 `$table->float('amount');`  |  테이블에 FLOAT 타입 지정
 `$table->increments('id');`  |  테이블에 (primary key) ID 증가시키기
 `$table->integer('votes');`  |  테이블에 INTEGER 타입 지정

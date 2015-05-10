@@ -304,7 +304,7 @@ Once you have performed validation, you will need an easy way to get the error m
 		}
 	});
 
-Note that when validation fails, we pass the `Validator` instance to the Blueirect using the `withErrors` method. This method will flash the error messages to the session so that they are available on the next request.
+Note that when validation fails, we pass the `Validator` instance to the Redirect using the `withErrors` method. This method will flash the error messages to the session so that they are available on the next request.
 
 However, notice that we do not have to explicitly bind the error messages to the view in our GET route. This is because Laravel will always check for errors in the session data, and automatically bind them to the view if they are available. **So, it is important to note that an `$errors` variable will always be available in all of your views, on every request**, allowing you to conveniently assume the `$errors` variable is always defined and can be safely used. The `$errors` variable will be an instance of `MessageBag`.
 
@@ -421,7 +421,7 @@ The field under validation must be able to be cast as a boolean. Accepted input 
 <a name="rule-confirmed"></a>
 #### confirmed
 
-The field under validation must have a matching field of `Moo_confirmation`. For example, if the field under validation is `password`, a matching `password_confirmation` field must be present in the input.
+The field under validation must have a matching field of `foo_confirmation`. For example, if the field under validation is `password`, a matching `password_confirmation` field must be present in the input.
 
 <a name="rule-date"></a>
 #### date
@@ -480,7 +480,7 @@ Passing `NULL` as a "where" clause value will add a check for a `NULL` database 
 The file under validation must be an image (jpeg, png, bmp, gif, or svg)
 
 <a name="rule-in"></a>
-#### in:_Moo_,_bar_,...
+#### in:_foo_,_bar_,...
 
 The field under validation must be included in the given list of values.
 
@@ -500,7 +500,7 @@ The field under validation must be formatted as an IP address.
 The field under validation must be less than or equal to a maximum _value_. Strings, numerics, and files are evaluated in the same fashion as the [`size`](#rule-size) rule.
 
 <a name="rule-mimes"></a>
-#### mimes:_Moo_,_bar_,...
+#### mimes:_foo_,_bar_,...
 
 The file under validation must have a MIME type corresponding to one of the listed extensions.
 
@@ -514,7 +514,7 @@ The file under validation must have a MIME type corresponding to one of the list
 The field under validation must have a minimum _value_. Strings, numerics, and files are evaluated in the same fashion as the [`size`](#rule-size) rule.
 
 <a name="rule-not-in"></a>
-#### not_in:_Moo_,_bar_,...
+#### not_in:_foo_,_bar_,...
 
 The field under validation must not be included in the given list of values.
 
@@ -541,22 +541,22 @@ The field under validation must be present in the input data.
 The field under validation must be present if the _field_ field is equal to any _value_.
 
 <a name="rule-required-with"></a>
-#### required_with:_Moo_,_bar_,...
+#### required_with:_foo_,_bar_,...
 
 The field under validation must be present _only if_ any of the other specified fields are present.
 
 <a name="rule-required-with-all"></a>
-#### required_with_all:_Moo_,_bar_,...
+#### required_with_all:_foo_,_bar_,...
 
 The field under validation must be present _only if_ all of the other specified fields are present.
 
 <a name="rule-required-without"></a>
-#### required_without:_Moo_,_bar_,...
+#### required_without:_foo_,_bar_,...
 
 The field under validation must be present _only when_ any of the other specified fields are not present.
 
 <a name="rule-required-without-all"></a>
-#### required_without_all:_Moo_,_bar_,...
+#### required_without_all:_foo_,_bar_,...
 
 The field under validation must be present _only when_ all of the other specified fields are not present.
 
@@ -712,16 +712,16 @@ In some cases, you may wish to specify your custom messages in a language file i
 
 Laravel provides a variety of helpful validation rules; however, you may wish to specify some of your own. One method of registering custom validation rules is using the `Validator::extend` method:
 
-	Validator::extend('Moo', function($attribute, $value, $parameters)
+	Validator::extend('foo', function($attribute, $value, $parameters)
 	{
-		return $value == 'Moo';
+		return $value == 'foo';
 	});
 
 The custom validator Closure receives three arguments: the name of the `$attribute` being validated, the `$value` of the attribute, and an array of `$parameters` passed to the rule.
 
 You may also pass a class and method to the `extend` method instead of a Closure:
 
-	Validator::extend('Moo', 'MooValidator@validate');
+	Validator::extend('foo', 'FooValidator@validate');
 
 Note that you will also need to define an error message for your custom rules. You can do so either using an inline custom message array or by adding an entry in the validation language file.
 
@@ -733,9 +733,9 @@ Instead of using Closure callbacks to extend the Validator, you may also extend 
 
 	class CustomValidator extends Illuminate\Validation\Validator {
 
-		public function validateMoo($attribute, $value, $parameters)
+		public function validateFoo($attribute, $value, $parameters)
 		{
-			return $value == 'Moo';
+			return $value == 'foo';
 		}
 
 	}
@@ -751,9 +751,9 @@ Next, you need to register your custom Validator extension:
 
 When creating a custom validation rule, you may sometimes need to define custom place-holder replacements for error messages. You may do so by creating a custom Validator as described above, and adding a `replaceXXX` function to the validator.
 
-	protected function replaceMoo($message, $attribute, $rule, $parameters)
+	protected function replaceFoo($message, $attribute, $rule, $parameters)
 	{
-		return str_replace(':Moo', $parameters[0], $message);
+		return str_replace(':foo', $parameters[0], $message);
 	}
 
 If you would like to add a custom message "replacer" without extending the `Validator` class, you may use the `Validator::replacer` method:

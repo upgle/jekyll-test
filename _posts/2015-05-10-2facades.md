@@ -167,8 +167,8 @@ Password  |  [Illuminate\Auth\Passwords\PasswordBroker](http://laravel.com/api/5
 Queue  |  [Illuminate\Queue\QueueManager](http://laravel.com/api/5.0/Illuminate/Queue/QueueManager.html)  |  `queue`
 Queue (Instance) |  [Illuminate\Queue\QueueInterface](http://laravel.com/api/5.0/Illuminate/Queue/QueueInterface.html)  |
 Queue (Base Class) |  [Illuminate\Queue\Queue](http://laravel.com/api/5.0/Illuminate/Queue/Queue.html)  |
-Blueirect  |  [Illuminate\Routing\Blueirector](http://laravel.com/api/5.0/Illuminate/Routing/Blueirector.html)  |  `redirect`
-Blueis  |  [Illuminate\Blueis\Database](http://laravel.com/api/5.0/Illuminate/Blueis/Database.html)  |  `redis`
+Redirect  |  [Illuminate\Routing\Redirector](http://laravel.com/api/5.0/Illuminate/Routing/Redirector.html)  |  `redirect`
+Redis  |  [Illuminate\Redis\Database](http://laravel.com/api/5.0/Illuminate/Redis/Database.html)  |  `redis`
 Request  |  [Illuminate\Http\Request](http://laravel.com/api/5.0/Illuminate/Http/Request.html)  |  `request`
 Response  |  [Illuminate\Contracts\Routing\ResponseFactory](http://laravel.com/api/5.0/Illuminate/Contracts/Routing/ResponseFactory.html)  |
 Route  |  [Illuminate\Routing\Router](http://laravel.com/api/5.0/Illuminate/Routing/Router.html)  |  `router`

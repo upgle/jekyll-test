@@ -48,18 +48,18 @@ categories: "5.0"
 
 때로는 CLI 외부에서 아티즌 명령어를 실행하기를 원할 수도 있습니다. 예를 들어 HTTP 라우트를 통해서 아티즘 명령어를 실행하기를 원할 수도 있습니다. 이럴 때에는 그냥 `Artisan` 파사드를 사용하면 됩니다. 
 
-	Route::get('/Moo', function()
+	Route::get('/foo', function()
 	{
-		$exitCode = Artisan::call('command:name', ['--option' => 'Moo']);
+		$exitCode = Artisan::call('command:name', ['--option' => 'foo']);
 
 		//
 	});
 
 [queue workers](/docs/5.0/queues)를 통해서 아티즌 명령어가 큐를 통해서 백그라운드에서 동작하도록 할 수도 있습니다:
 
-	Route::get('/Moo', function()
+	Route::get('/foo', function()
 	{
-		Artisan::queue('command:name', ['--option' => 'Moo']);
+		Artisan::queue('command:name', ['--option' => 'foo']);
 
 		//
 	});
@@ -93,86 +93,86 @@ categories: "5.0"
 
 #### 직접 크론 표현식으로 등록하는 법
 
-	$schedule->command('Moo')->cron('* * * * *');
+	$schedule->command('foo')->cron('* * * * *');
 
 #### 일정한 주기로 실행되는 작업
 
-	$schedule->command('Moo')->everyFiveMinutes();
+	$schedule->command('foo')->everyFiveMinutes();
 
-	$schedule->command('Moo')->everyTenMinutes();
+	$schedule->command('foo')->everyTenMinutes();
 
-	$schedule->command('Moo')->everyThirtyMinutes();
+	$schedule->command('foo')->everyThirtyMinutes();
 
 #### 매일 실행되는 작업
 
-	$schedule->command('Moo')->daily();
+	$schedule->command('foo')->daily();
 
 #### 특정 시작에 실행되는 작업(24시 기준)
 
-	$schedule->command('Moo')->dailyAt('15:00');
+	$schedule->command('foo')->dailyAt('15:00');
 
 #### 매일 2번씩 실행되는 작업
 
-	$schedule->command('Moo')->twiceDaily();
+	$schedule->command('foo')->twiceDaily();
 
 #### 평일에 실행되는 작업
 
-	$schedule->command('Moo')->weekdays();
+	$schedule->command('foo')->weekdays();
 
 #### 매주 실행되는 작업
 
-	$schedule->command('Moo')->weekly();
+	$schedule->command('foo')->weekly();
 
 	// Schedule weekly job for specific day (0-6) and time...
-	$schedule->command('Moo')->weeklyOn(1, '8:00');
+	$schedule->command('foo')->weeklyOn(1, '8:00');
 
 #### 매월 실행되는 작업
 
-	$schedule->command('Moo')->monthly();
+	$schedule->command('foo')->monthly();
 
 #### 특정 요일에 실행되는 작업
 
-	$schedule->command('Moo')->mondays();
-	$schedule->command('Moo')->tuesdays();
-	$schedule->command('Moo')->wednesdays();
-	$schedule->command('Moo')->thursdays();
-	$schedule->command('Moo')->fridays();
-	$schedule->command('Moo')->saturdays();
-	$schedule->command('Moo')->sundays();
+	$schedule->command('foo')->mondays();
+	$schedule->command('foo')->tuesdays();
+	$schedule->command('foo')->wednesdays();
+	$schedule->command('foo')->thursdays();
+	$schedule->command('foo')->fridays();
+	$schedule->command('foo')->saturdays();
+	$schedule->command('foo')->sundays();
 
 #### 중복 작업 방지하기
 
 기본적으로 예약된 작업은 이전 인스턴스가 여전히 실행중이더라도 실행됩니다. 이를 방지하려면 `withoutOverlapping` 메소드를 사용하면 됩니다:
 
-	$schedule->command('Moo')->withoutOverlapping();
+	$schedule->command('foo')->withoutOverlapping();
 
-이 예제에서 `Moo` 명령어는 이미 실행되고 있지 않은 경우에 매분마다 실행됩니다. 
+이 예제에서 `foo` 명령어는 이미 실행되고 있지 않은 경우에 매분마다 실행됩니다. 
 
 #### 구동 환경에 따라서 작업 실행해야 할 때
 
-	$schedule->command('Moo')->monthly()->environments('production');
+	$schedule->command('foo')->monthly()->environments('production');
 
 #### 공사중모드일때 실행되도록 지정하기
 
-	$schedule->command('Moo')->monthly()->evenInMaintenanceMode();
+	$schedule->command('foo')->monthly()->evenInMaintenanceMode();
 
 #### 콜백 결과가 True 일때만 실행
 
-	$schedule->command('Moo')->monthly()->when(function()
+	$schedule->command('foo')->monthly()->when(function()
 	{
 		return true;
 	});
 
 #### 스케줄 작업 결과를 이메일로 받아보기
 
-	$schedule->command('Moo')->sendOutputTo($filePath)->emailOutputTo('Moo@example.com');
+	$schedule->command('foo')->sendOutputTo($filePath)->emailOutputTo('foo@example.com');
 
 > **주의:** 이메일을 보내기 전에 파일로 결과를 저장해야 합니다. 
 
 #### 특정 파일로 스케줄 작업 결과 저장하기
 
-	$schedule->command('Moo')->sendOutputTo($filePath);
+	$schedule->command('foo')->sendOutputTo($filePath);
 
 #### 작업이 실행된 후에 특정 URL 접속하기
 
-	$schedule->command('Moo')->thenPing($url);
+	$schedule->command('foo')->thenPing($url);

@@ -20,7 +20,7 @@ categories: "5.0"
 
 The `array_add` function adds a given key / value pair to the array if the given key doesn't already exist in the array. `array_add` 함수는 배열 내에 키가 존재하지 않는 경우 주어진 key/value 쌍을 배열에 추가합니다. 
 
-	$array = ['Moo' => 'bar'];
+	$array = ['foo' => 'bar'];
 
 	$array = array_add($array, 'key', 'value');
 
@@ -28,7 +28,7 @@ The `array_add` function adds a given key / value pair to the array if the given
 
 The `array_divide` function returns two arrays, one containing the keys, and the other containing the values of the original array. `array_divide` 원래의 배열에서 키들을 담고 있는 배열과 값들을 담고 있는 배열, 총 2개의 배열들을 반환합니다. 
 
-	$array = ['Moo' => 'bar'];
+	$array = ['foo' => 'bar'];
 
 	list($keys, $values) = array_divide($array);
 
@@ -37,11 +37,11 @@ The `array_divide` function returns two arrays, one containing the keys, and the
 The `array_dot` function flattens a multi-dimensional array into a single level array that uses "dot" notation to indicate depth. 
 `array_dot` 함수는 다차원 배열을 ‘점(.)’으로 배열 깊이를 표기하면서 단일 레벨 배열로 만듭니다.
 
-	$array = ['Moo' => ['bar' => 'baz']];
+	$array = ['foo' => ['bar' => 'baz']];
 
 	$array = array_dot($array);
 
-	// ['Moo.bar' => 'baz'];
+	// ['foo.bar' => 'baz'];
 
 ### array_except
 
@@ -206,14 +206,14 @@ Filter the array using the given Closure.
 Return the first element in the array. 
 배열의 첫번째 요소를 반환합니다.
 
-	$first = head($this->returnsArray('Moo'));
+	$first = head($this->returnsArray('foo'));
 
 ### last
 
 Return the last element in the array. Useful for method chaining.
 배열의 마지막 요소를 반완합니다. 메소드 체인을 사용하는데 유용합니다.
 
-	$last = last($this->returnsArray('Moo'));
+	$last = last($this->returnsArray('foo'));
 
 <a name="paths"></a>
 ## Paths
@@ -255,35 +255,35 @@ Register a new GET route with the router.
 Register a new POST route with the router.
 새로운 POST 라우트를 등록합니다.
 
-	post('Moo/bar', 'MooController@action');
+	post('foo/bar', 'FooController@action');
 
 ### put
 
 Register a new PUT route with the router.
 새로운  PUT 라우트를 등록합니다.
 
-	put('Moo/bar', 'MooController@action');
+	put('foo/bar', 'FooController@action');
 
 ### patch
 
 Register a new PATCH route with the router.
 새로운 PATCH 라우트를 등록합니다.
 
-	patch('Moo/bar', 'MooController@action');
+	patch('foo/bar', 'FooController@action');
 
 ### delete
 
 Register a new DELETE route with the router.
 새로운 DELETE 라우트를 등록합니다.
 
-	delete('Moo/bar', 'MooController@action');
+	delete('foo/bar', 'FooController@action');
 	
 ### resource
 
 Register a new RESTful resource route with the router.
 새로운 RESTful 라우트를 등록합니다.
 
-	resource('Moo', 'MooController');
+	resource('foo', 'FooController');
 
 <a name="strings"></a>
 ## Strings
@@ -293,16 +293,16 @@ Register a new RESTful resource route with the router.
 Convert the given string to `camelCase`.
 주어진 문자열을 `camelCase` 형태로 변환합니다.
 
-	$camel = camel_case('Moo_bar');
+	$camel = camel_case('foo_bar');
 
-	// MooBar
+	// fooBar
 
 ### class_basename
 
 Get the class name of the given class, without any namespace names.
 어떤 네임스페이스 이름 없이 주어진 클래스의 클래스 명을 가져옵니다.
 
-	$class = class_basename('Moo\Bar\Baz');
+	$class = class_basename('Foo\Bar\Baz');
 
 	// Baz
 
@@ -311,7 +311,7 @@ Get the class name of the given class, without any namespace names.
 Run `htmlentities` over the given string, with UTF-8 support.
 주어진 문자열에 대해 `htmlentities`를 실행합니다. (UTF-8 지원)
 
-	$entities = e('<html>Moo</html>');
+	$entities = e('<html>foo</html>');
 
 ### ends_with
 
@@ -325,9 +325,9 @@ Determine if the given haystack ends with a given needle.
 Convert the given string to `snake_case`.
 주어진 문자열을 `snake_case` 형태로 변환합니다.
 
-	$snake = snake_case('MooBar');
+	$snake = snake_case('fooBar');
 
-	// Moo_bar
+	// foo_bar
 
 ### str_limit
 
@@ -369,7 +369,7 @@ Add a single instance of the given needle to the haystack. Remove any extra inst
 Determine if a given string matches a given pattern. Asterisks may be used to indicate wildcards.
 주어진 문자열이 주어진 패턴에 일치하는지 확인합니다. 별표는 wildcards를 가르키는데 사용될 수 있습니다.
 
-	$value = str_is('Moo*', 'Moobar');
+	$value = str_is('foo*', 'foobar');
 
 ### str_plural
 
@@ -410,9 +410,9 @@ Example:
 Convert the given string to `StudlyCase`.
 주어진 문자열을 `StudlyCase` 형태로 변환합니다.
 
-	$value = studly_case('Moo_bar');
+	$value = studly_case('foo_bar');
 
-	// MooBar
+	// FooBar
 
 ### trans
 
@@ -426,7 +426,7 @@ Translate a given language line. Alias of `Lang::get`.
 Translate a given language line with inflection. Alias of `Lang::choice`.
 억양, 어조(inflection)를 사용하여 주어진 언어 문장을 번역합니다. `Lang::choice`의 별칭입니다.
 
-	$value = trans_choice('Moo.bar', $count);
+	$value = trans_choice('foo.bar', $count);
 
 <a name="urls"></a>
 ## URLs
@@ -457,21 +457,21 @@ asset을 위한 URL을 생성합니다.
 Generate a URL for an asset using HTTPS.
 HTTPS를 사용하여 asset을 위한 URL을 생성합니다.
 
-	echo secure_asset('Moo/bar.zip', $title, $attributes = []);
+	echo secure_asset('foo/bar.zip', $title, $attributes = []);
 
 ### secure_url
 
 Generate a fully qualified URL to a given path using HTTPS.
 주어진 경로에 대한 완전한 URL을 HTTPS를 사용하여 생성합니다.
 
-	echo secure_url('Moo/bar', $parameters = []);
+	echo secure_url('foo/bar', $parameters = []);
 
 ### url
 
 Generate a fully qualified URL to the given path.
 주어진 경로에 대한 완전한 URL을 생성합니다.
 
-	echo url('Moo/bar', $parameters = [], $secure = null);
+	echo url('foo/bar', $parameters = [], $secure = null);
 
 <a name="miscellaneous"></a>
 ## Miscellaneous
@@ -530,4 +530,4 @@ Get a View instance for the given view path.
 Return the given object.
 주어진 object를 반환합니다.
 
-	$value = with(new Moo)->doWork();
+	$value = with(new Foo)->doWork();

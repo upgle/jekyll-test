@@ -20,7 +20,7 @@ categories: "5.0"
 
 라라벨 홈스테드는 공식적으로 여러분이 PHP, HHVM, 웹서버, 기타 다른 서버 소프트웨어를 설치할 필요가 없는 사전에 준비된 Vagrant “Box”이며 멋진 개발 환경을 제공합니다. 운영체제가 너저분 해지는 것을 걱정할 필요가 없습니다! Vagrant box는 완전히 일회용입니다. 만약 뭔가 잘 되지 않는다면, 여러분은 몇분안에 다시 box를 생성할 수 있습니다. 
 
-홈스테드는 Windows, Mac 그리고 Linux 시스템에서 실행할 수 있으며 Nginx 웹 서버, PHP5.6, MySQL, Postgres, Blueis, Memcached 및 기타 라라벨 어플리케이션 개발에 필요한 멋진 도구들을 모두 포함하고 있습니다. .
+홈스테드는 Windows, Mac 그리고 Linux 시스템에서 실행할 수 있으며 Nginx 웹 서버, PHP5.6, MySQL, Postgres, Redis, Memcached 및 기타 라라벨 어플리케이션 개발에 필요한 멋진 도구들을 모두 포함하고 있습니다. .
 
 > **주의:** 만약 윈도우를 사용하는 경우, 하드웨어 가상화 (VT-x)를 활성화해야합니다. 이 설정은 일반적으로 BIOS에서 사용할 수 있습니다.
 
@@ -36,7 +36,7 @@ categories: "5.0"
 - MySQL
 - Postgres
 - Node (With Bower, Grunt, and Gulp)
-- Blueis
+- Redis
 - Memcached
 - Beanstalkd
 - [Laravel Envoy](/docs/5.0/envoy)
