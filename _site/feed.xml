@@ -4,10 +4,10 @@
     <title>라라벨 한국어 매뉴얼</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://www.xpressengine.com/</link>
-    <atom:link href="http://www.xpressengine.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 21:22:52 +0900</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 21:22:52 +0900</lastBuildDate>
+    <link>http://www.xpressengine.com/jekyll-test//</link>
+    <atom:link href="http://www.xpressengine.com/jekyll-test//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 11 May 2015 09:43:31 +0900</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 09:43:31 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -213,8 +213,8 @@ class ProfileComposer {
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;View::creator(&amp;#39;profile&amp;#39;, &amp;#39;App\Http\ViewCreators\ProfileCreator&amp;#39;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/views</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/views</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/views</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/views</guid>
         
         
         <category>5.0</category>
@@ -995,8 +995,8 @@ class CustomValidator extends Illuminate\Validation\Validator {
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/validation</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/validation</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/validation</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/validation</guid>
         
         
         <category>5.0</category>
@@ -1390,8 +1390,8 @@ public function updateRememberToken(UserInterface $user, $token);
 &lt;p&gt;와일드 카드 이벤트 리스너는 더이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, &lt;code&gt;Event::firing()&lt;/code&gt; 를 사용하십시오.&lt;/p&gt;
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/upgrade</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/upgrade</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/upgrade</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/upgrade</guid>
         
         
         <category>5.0</category>
@@ -1608,8 +1608,8 @@ $this-&amp;gt;seed($connection);
 &lt;p&gt;이미 알고 있다 시피 여러분은 테스트 메소드에서 &lt;code&gt;$this-&amp;gt;app&lt;/code&gt; 을 통해서 어플리케이션(&lt;a href=&quot;/docs/5.0/container&quot;&gt;서비스 컨테이너&lt;/a&gt;)에 엑세스 할 수 있습니다. 이 서비스 컨테이너 인스턴스는 각각의 테스트 클래스 마다 새로 고침됩니다. 만약 여러분이 수동으로 어플리케이션을 새로고침 하고 싶은 경우에는 테스트 메소드에서 &lt;code&gt;refreshApplication&lt;/code&gt; 메소드를 사용하면 됩니다. 이렇게 하면 테스트 케이스가 실행을 시작한 이후 IoC 컨테이너에 등록된 mock 객체와 추가적인 바인딩을 재설정 할것입니다. &lt;/p&gt;
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/testing</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/testing</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/testing</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/testing</guid>
         
         
         <category>5.0</category>
@@ -1754,8 +1754,8 @@ The current UNIX timestamp is {{ time() }}.
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{{-- This comment will not be in the rendered HTML --}}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/templates</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/templates</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/templates</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/templates</guid>
         
         
         <category>5.0</category>
@@ -1833,8 +1833,8 @@ The current UNIX timestamp is {{ time() }}.
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;php artisan app:name SocialNet
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/structure</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/structure</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/structure</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/structure</guid>
         
         
         <category>5.0</category>
@@ -1968,8 +1968,8 @@ php artisan migrate
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/session</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/session</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/session</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/session</guid>
         
         
         <category>5.0</category>
@@ -2224,8 +2224,8 @@ $table-&amp;gt;foreign(&amp;#39;user_id&amp;#39;)-&amp;gt;references(&amp;#39;id
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/schema</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/schema</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/schema</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/schema</guid>
         
         
         <category>5.0</category>
@@ -2594,8 +2594,8 @@ $redirect = redirect()-&amp;gt;route(&amp;#39;profile&amp;#39;);
 &lt;p&gt;404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 &lt;a href=&quot;/docs/5.0/errors#http-exceptions&quot;&gt;errors&lt;/a&gt; 부분을 참조하십시오.&lt;/p&gt;
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/routing</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/routing</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/routing</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/routing</guid>
         
         
         <category>5.0</category>
@@ -2772,8 +2772,8 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;return response()-&amp;gt;caps(&amp;#39;foo&amp;#39;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/docs/5.0/responses</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/docs/5.0/responses</guid>
+        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/responses</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/responses</guid>
         
         
         <category>5.0</category>
