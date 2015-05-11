@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Validation</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/jekyll-test/js/prism.js"></script>
+
+  <link rel="stylesheet" href="/jekyll-test/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/jekyll-test//docs/5.0/validation/">
+  <link rel="alternate" type="application/rss+xml" title="라라벨 한국어 매뉴얼" href="http://www.xpressengine.com/jekyll-test//feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo">Laravel korean docs <small>laravel 한글 매뉴얼</small></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/jekyll-test//img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/jekyll-test//img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/jekyll-test//img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/jekyll-test//img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/jekyll-test//img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/docs/5.0/configuration">설정</a></li>
+            <li><a href="/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/docs/5.0/requests">Requests</a></li>
+            <li><a href="/docs/5.0/responses">Responses</a></li>
+            <li><a href="/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/docs/5.0/facades">파사드</a></li>
+            <li><a href="/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/docs/5.0/authentication">인증</a></li>
+            <li><a href="/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/docs/5.0/cache">캐시</a></li>
+            <li><a href="/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/docs/5.0/events">이벤트</a></li>
+            <li><a href="/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/docs/5.0/hashing">해시</a></li>
+            <li><a href="/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/docs/5.0/mail">메일</a></li>
+            <li><a href="/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/docs/5.0/queues">큐</a></li>
+            <li><a href="/docs/5.0/session">세션</a></li>
+            <li><a href="/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="validation">Validation</h1>
+
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#controller-validation">Controller Validation</a></li>
+<li><a href="#form-request-validation">Form Request Validation</a></li>
+<li><a href="#working-with-error-messages">Working With Error Messages</a></li>
+<li><a href="#error-messages-and-views">Error Messages &amp; Views</a></li>
+<li><a href="#available-validation-rules">Available Validation Rules</a></li>
+<li><a href="#conditionally-adding-rules">Conditionally Adding Rules</a></li>
+<li><a href="#custom-error-messages">Custom Error Messages</a></li>
+<li><a href="#custom-validation-rules">Custom Validation Rules</a></li>
+</ul>
+
+<p><a name="basic-usage"></a></p>
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<p>Laravel ships with a simple, convenient facility for validating data and retrieving validation error messages via the <code>Validation</code> class.</p>
+
+<h4 id="basic-validation-example">Basic Validation Example</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$validator = Validator::make(
+    [&#39;name&#39; =&gt; &#39;Dayle&#39;],
+    [&#39;name&#39; =&gt; &#39;required|min:5&#39;]
+);
+</code></pre></div>
+<p>The first argument passed to the <code>make</code> method is the data under validation. The second argument is the validation rules that should be applied to the data.</p>
+
+<h4 id="using-arrays-to-specify-rules">Using Arrays To Specify Rules</h4>
+
+<p>Multiple rules may be delimited using either a &quot;pipe&quot; character, or as separate elements of an array.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$validator = Validator::make(
+    [&#39;name&#39; =&gt; &#39;Dayle&#39;],
+    [&#39;name&#39; =&gt; [&#39;required&#39;, &#39;min:5&#39;]]
+);
+</code></pre></div>
+<h4 id="validating-multiple-fields">Validating Multiple Fields</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$validator = Validator::make(
+    [
+        &#39;name&#39; =&gt; &#39;Dayle&#39;,
+        &#39;password&#39; =&gt; &#39;lamepassword&#39;,
+        &#39;email&#39; =&gt; &#39;email@example.com&#39;
+    ],
+    [
+        &#39;name&#39; =&gt; &#39;required&#39;,
+        &#39;password&#39; =&gt; &#39;required|min:8&#39;,
+        &#39;email&#39; =&gt; &#39;required|email|unique:users&#39;
+    ]
+);
+</code></pre></div>
+<p>Once a <code>Validator</code> instance has been created, the <code>fails</code> (or <code>passes</code>) method may be used to perform the validation.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if ($validator-&gt;fails())
+{
+    // The given data did not pass validation
+}
+</code></pre></div>
+<p>If validation has failed, you may retrieve the error messages from the validator.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$messages = $validator-&gt;messages();
+</code></pre></div>
+<p>You may also access an array of the failed validation rules, without messages. To do so, use the <code>failed</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$failed = $validator-&gt;failed();
+</code></pre></div>
+<h4 id="validating-files">Validating Files</h4>
+
+<p>The <code>Validator</code> class provides several rules for validating files, such as <code>size</code>, <code>mimes</code>, and others. When validating files, you may simply pass them into the validator with your other data.</p>
+
+<h3 id="after-validation-hook">After Validation Hook</h3>
+
+<p>The validator also allows you to attach callbacks to be run after validation is completed. This allows you to easily perform further validation, and even add more error messages to the message collection. To get started, use the <code>after</code> method on a validator instance:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$validator = Validator::make(...);
+
+$validator-&gt;after(function($validator)
+{
+    if ($this-&gt;somethingElseIsInvalid())
+    {
+        $validator-&gt;errors()-&gt;add(&#39;field&#39;, &#39;Something is wrong with this field!&#39;);
+    }
+});
+
+if ($validator-&gt;fails())
+{
+    //
+}
+</code></pre></div>
+<p>You may add as many <code>after</code> callbacks to a validator as needed.</p>
+
+<p><a name="controller-validation"></a></p>
+
+<h2 id="controller-validation">Controller Validation</h2>
+
+<p>Of course, manually creating and checking a <code>Validator</code> instance each time you do validation is a headache. Don&#39;t worry, you have other options! The base <code>App\Http\Controllers\Controller</code> class included with Laravel uses a <code>ValidatesRequests</code> trait. This trait provides a single, convenient method for validating incoming HTTP requests. Here&#39;s what it looks like:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Store the incoming blog post.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function store(Request $request)
+{
+    $this-&gt;validate($request, [
+        &#39;title&#39; =&gt; &#39;required|unique|max:255&#39;,
+        &#39;body&#39; =&gt; &#39;required&#39;,
+    ]);
+
+    //
+}
+</code></pre></div>
+<p>If validation passes, your code will keep executing normally. However, if validation fails, an <code>Illuminate\Contracts\Validation\ValidationException</code> will be thrown. This exception is automatically caught and a redirect is generated to the user&#39;s previous location. The validation errors are even automatically flashed to the session!</p>
+
+<p>If the incoming request was an AJAX request, no redirect will be generated. Instead, an HTTP response with a 422 status code will be returned to the browser containing a JSON representation of the validation errors.</p>
+
+<p>For example, here is the equivalent code written manually:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Store the incoming blog post.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function store(Request $request)
+{
+    $v = Validator::make($request-&gt;all(), [
+        &#39;title&#39; =&gt; &#39;required|unique|max:255&#39;,
+        &#39;body&#39; =&gt; &#39;required&#39;,
+    ]);
+
+    if ($v-&gt;fails())
+    {
+        return redirect()-&gt;back()-&gt;withErrors($v-&gt;errors());
+    }
+
+    //
+}
+</code></pre></div>
+<h3 id="customizing-the-flashed-error-format">Customizing The Flashed Error Format</h3>
+
+<p>If you wish to customize the format of the validation errors that are flashed to the session when validation fails, override the <code>formatValidationErrors</code> on your base controller. Don&#39;t forget to import the <code>Illuminate\Validation\Validator</code> class at the top of the file:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * {@inheritdoc}
+ */
+protected function formatValidationErrors(Validator $validator)
+{
+    return $validator-&gt;errors()-&gt;all();
+}
+</code></pre></div>
+<p><a name="form-request-validation"></a></p>
+
+<h2 id="form-request-validation">Form Request Validation</h2>
+
+<p>For more complex validation scenarios, you may wish to create a &quot;form request&quot;. Form requests are custom request classes that contain validation logic. To create a form request class, use the <code>make:request</code> Artisan CLI command:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:request StoreBlogPostRequest
+</code></pre></div>
+<p>The generated class will be placed in the <code>app/Http/Requests</code> directory. Let&#39;s add a few validation rules to the <code>rules</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Get the validation rules that apply to the request.
+ *
+ * @return array
+ */
+public function rules()
+{
+    return [
+        &#39;title&#39; =&gt; &#39;required|unique|max:255&#39;,
+        &#39;body&#39; =&gt; &#39;required&#39;,
+    ];
+}
+</code></pre></div>
+<p>So, how are the validation rules executed? All you need to do is type-hint the request on your controller method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Store the incoming blog post.
+ *
+ * @param  StoreBlogPostRequest  $request
+ * @return Response
+ */
+public function store(StoreBlogPostRequest $request)
+{
+    // The incoming request is valid...
+}
+</code></pre></div>
+<p>The incoming form request is validated before the controller method is called, meaning you do not need to clutter your controller with any validation logic. It has already been validated!</p>
+
+<p>If validation fails, a redirect response will be generated to send the user back to their previous location. The errors will also be flashed to the session so they are available for display. If the request was an AJAX request, a HTTP response with a 422 status code will be returned to the user including a JSON representation of the validation errors.</p>
+
+<h3 id="authorizing-form-requests">Authorizing Form Requests</h3>
+
+<p>The form request class also contains an <code>authorize</code> method. Within this method, you may check if the authenticated user actually has the authority to update a given resource. For example, if a user is attempting to update a blog post comment, do they actually own that comment? For example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Determine if the user is authorized to make this request.
+ *
+ * @return bool
+ */
+public function authorize()
+{
+    $commentId = $this-&gt;route(&#39;comment&#39;);
+
+    return Comment::where(&#39;id&#39;, $commentId)
+                  -&gt;where(&#39;user_id&#39;, Auth::id())-&gt;exists();
+}
+</code></pre></div>
+<p>Note the call to the <code>route</code> method in the example above. This method grants you access to the URI parameters defined on the route being called, such as the <code>{comment}</code> parameter in the example below:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::post(&#39;comment/{comment}&#39;);
+</code></pre></div>
+<p>If the <code>authorize</code> method returns <code>false</code>, a HTTP response with a 403 status code will automatically be returned and your controller method will not execute.</p>
+
+<p>If you plan to have authorization logic in another part of your application, simply return <code>true</code> from the <code>authorize</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Determine if the user is authorized to make this request.
+ *
+ * @return bool
+ */
+public function authorize()
+{
+    return true;
+}
+</code></pre></div>
+<h3 id="customizing-the-flashed-error-format">Customizing The Flashed Error Format</h3>
+
+<p>If you wish to customize the format of the validation errors that are flashed to the session when validation fails, override the <code>formatErrors</code> on your base request (<code>App\Http\Requests\Request</code>). Don&#39;t forget to import the <code>Illuminate\Validation\Validator</code> class at the top of the file:
+    /**
+     * {@inheritdoc}
+     */
+    protected function formatErrors(Validator $validator)
+    {
+        return $validator-&gt;errors()-&gt;all();
+    }</p>
+
+<p><a name="working-with-error-messages"></a></p>
+
+<h2 id="working-with-error-messages">Working With Error Messages</h2>
+
+<p>After calling the <code>messages</code> method on a <code>Validator</code> instance, you will receive a <code>MessageBag</code> instance, which has a variety of convenient methods for working with error messages.</p>
+
+<h4 id="retrieving-the-first-error-message-for-a-field">Retrieving The First Error Message For A Field</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">echo $messages-&gt;first(&#39;email&#39;);
+</code></pre></div>
+<h4 id="retrieving-all-error-messages-for-a-field">Retrieving All Error Messages For A Field</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foreach ($messages-&gt;get(&#39;email&#39;) as $message)
+{
+    //
+}
+</code></pre></div>
+<h4 id="retrieving-all-error-messages-for-all-fields">Retrieving All Error Messages For All Fields</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foreach ($messages-&gt;all() as $message)
+{
+    //
+}
+</code></pre></div>
+<h4 id="determining-if-messages-exist-for-a-field">Determining If Messages Exist For A Field</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if ($messages-&gt;has(&#39;email&#39;))
+{
+    //
+}
+</code></pre></div>
+<h4 id="retrieving-an-error-message-with-a-format">Retrieving An Error Message With A Format</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">echo $messages-&gt;first(&#39;email&#39;, &#39;&lt;p&gt;:message&lt;/p&gt;&#39;);
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> By default, messages are formatted using Bootstrap compatible syntax.</p>
+</blockquote>
+
+<h4 id="retrieving-all-error-messages-with-a-format">Retrieving All Error Messages With A Format</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foreach ($messages-&gt;all(&#39;&lt;li&gt;:message&lt;/li&gt;&#39;) as $message)
+{
+    //
+}
+</code></pre></div>
+<p><a name="error-messages-and-views"></a></p>
+
+<h2 id="error-messages-&amp;-views">Error Messages &amp; Views</h2>
+
+<p>Once you have performed validation, you will need an easy way to get the error messages back to your views. This is conveniently handled by Laravel. Consider the following routes as an example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::get(&#39;register&#39;, function()
+{
+    return View::make(&#39;user.register&#39;);
+});
+
+Route::post(&#39;register&#39;, function()
+{
+    $rules = [...];
+
+    $validator = Validator::make(Input::all(), $rules);
+
+    if ($validator-&gt;fails())
+    {
+        return redirect(&#39;register&#39;)-&gt;withErrors($validator);
+    }
+});
+</code></pre></div>
+<p>Note that when validation fails, we pass the <code>Validator</code> instance to the Redirect using the <code>withErrors</code> method. This method will flash the error messages to the session so that they are available on the next request.</p>
+
+<p>However, notice that we do not have to explicitly bind the error messages to the view in our GET route. This is because Laravel will always check for errors in the session data, and automatically bind them to the view if they are available. <strong>So, it is important to note that an <code>$errors</code> variable will always be available in all of your views, on every request</strong>, allowing you to conveniently assume the <code>$errors</code> variable is always defined and can be safely used. The <code>$errors</code> variable will be an instance of <code>MessageBag</code>.</p>
+
+<p>So, after redirection, you may utilize the automatically bound <code>$errors</code> variable in your view:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php echo $errors-&gt;first(&#39;email&#39;); ?&gt;
+</code></pre></div>
+<h3 id="named-error-bags">Named Error Bags</h3>
+
+<p>If you have multiple forms on a single page, you may wish to name the <code>MessageBag</code> of errors. This will allow you to retrieve the error messages for a specific form. Simply pass a name as the second argument to <code>withErrors</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return redirect(&#39;register&#39;)-&gt;withErrors($validator, &#39;login&#39;);
+</code></pre></div>
+<p>You may then access the named <code>MessageBag</code> instance from the <code>$errors</code> variable:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php echo $errors-&gt;login-&gt;first(&#39;email&#39;); ?&gt;
+</code></pre></div>
+<p><a name="available-validation-rules"></a></p>
+
+<h2 id="available-validation-rules">Available Validation Rules</h2>
+
+<p>Below is a list of all available validation rules and their function:</p>
+
+<ul>
+<li><a href="#rule-accepted">Accepted</a></li>
+<li><a href="#rule-active-url">Active URL</a></li>
+<li><a href="#rule-after">After (Date)</a></li>
+<li><a href="#rule-alpha">Alpha</a></li>
+<li><a href="#rule-alpha-dash">Alpha Dash</a></li>
+<li><a href="#rule-alpha-num">Alpha Numeric</a></li>
+<li><a href="#rule-array">Array</a></li>
+<li><a href="#rule-before">Before (Date)</a></li>
+<li><a href="#rule-between">Between</a></li>
+<li><a href="#rule-boolean">Boolean</a></li>
+<li><a href="#rule-confirmed">Confirmed</a></li>
+<li><a href="#rule-date">Date</a></li>
+<li><a href="#rule-date-format">Date Format</a></li>
+<li><a href="#rule-different">Different</a></li>
+<li><a href="#rule-digits">Digits</a></li>
+<li><a href="#rule-digits-between">Digits Between</a></li>
+<li><a href="#rule-email">E-Mail</a></li>
+<li><a href="#rule-exists">Exists (Database)</a></li>
+<li><a href="#rule-image">Image (File)</a></li>
+<li><a href="#rule-in">In</a></li>
+<li><a href="#rule-integer">Integer</a></li>
+<li><a href="#rule-ip">IP Address</a></li>
+<li><a href="#rule-max">Max</a></li>
+<li><a href="#rule-mimes">MIME Types</a></li>
+<li><a href="#rule-min">Min</a></li>
+<li><a href="#rule-not-in">Not In</a></li>
+<li><a href="#rule-numeric">Numeric</a></li>
+<li><a href="#rule-regex">Regular Expression</a></li>
+<li><a href="#rule-required">Required</a></li>
+<li><a href="#rule-required-if">Required If</a></li>
+<li><a href="#rule-required-with">Required With</a></li>
+<li><a href="#rule-required-with-all">Required With All</a></li>
+<li><a href="#rule-required-without">Required Without</a></li>
+<li><a href="#rule-required-without-all">Required Without All</a></li>
+<li><a href="#rule-same">Same</a></li>
+<li><a href="#rule-size">Size</a></li>
+<li><a href="#rule-string">String</a></li>
+<li><a href="#rule-timezone">Timezone</a></li>
+<li><a href="#rule-unique">Unique (Database)</a></li>
+<li><a href="#rule-url">URL</a></li>
+</ul>
+
+<p><a name="rule-accepted"></a></p>
+
+<h4 id="accepted">accepted</h4>
+
+<p>The field under validation must be <em>yes</em>, <em>on</em>, <em>1</em>, or <em>true</em>. This is useful for validating &quot;Terms of Service&quot; acceptance.</p>
+
+<p><a name="rule-active-url"></a></p>
+
+<h4 id="active_url">active_url</h4>
+
+<p>The field under validation must be a valid URL according to the <code>checkdnsrr</code> PHP function.</p>
+
+<p><a name="rule-after"></a></p>
+
+<h4 id="after:date">after:<em>date</em></h4>
+
+<p>The field under validation must be a value after a given date. The dates will be passed into the PHP <code>strtotime</code> function.</p>
+
+<p><a name="rule-alpha"></a></p>
+
+<h4 id="alpha">alpha</h4>
+
+<p>The field under validation must be entirely alphabetic characters.</p>
+
+<p><a name="rule-alpha-dash"></a></p>
+
+<h4 id="alpha_dash">alpha_dash</h4>
+
+<p>The field under validation may have alpha-numeric characters, as well as dashes and underscores.</p>
+
+<p><a name="rule-alpha-num"></a></p>
+
+<h4 id="alpha_num">alpha_num</h4>
+
+<p>The field under validation must be entirely alpha-numeric characters.</p>
+
+<p><a name="rule-array"></a></p>
+
+<h4 id="array">array</h4>
+
+<p>The field under validation must be of type array.</p>
+
+<p><a name="rule-before"></a></p>
+
+<h4 id="before:date">before:<em>date</em></h4>
+
+<p>The field under validation must be a value preceding the given date. The dates will be passed into the PHP <code>strtotime</code> function.</p>
+
+<p><a name="rule-between"></a></p>
+
+<h4 id="between:min,max">between:<em>min</em>,<em>max</em></h4>
+
+<p>The field under validation must have a size between the given <em>min</em> and <em>max</em>. Strings, numerics, and files are evaluated in the same fashion as the <code>size</code> rule.</p>
+
+<p><a name="rule-boolean"></a></p>
+
+<h4 id="boolean">boolean</h4>
+
+<p>The field under validation must be able to be cast as a boolean. Accepted input are <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>, <code>&quot;1&quot;</code> and <code>&quot;0&quot;</code>.</p>
+
+<p><a name="rule-confirmed"></a></p>
+
+<h4 id="confirmed">confirmed</h4>
+
+<p>The field under validation must have a matching field of <code>foo_confirmation</code>. For example, if the field under validation is <code>password</code>, a matching <code>password_confirmation</code> field must be present in the input.</p>
+
+<p><a name="rule-date"></a></p>
+
+<h4 id="date">date</h4>
+
+<p>The field under validation must be a valid date according to the <code>strtotime</code> PHP function.</p>
+
+<p><a name="rule-date-format"></a></p>
+
+<h4 id="date_format:format">date_format:<em>format</em></h4>
+
+<p>The field under validation must match the <em>format</em> defined according to the <code>date_parse_from_format</code> PHP function.</p>
+
+<p><a name="rule-different"></a></p>
+
+<h4 id="different:field">different:<em>field</em></h4>
+
+<p>The given <em>field</em> must be different than the field under validation.</p>
+
+<p><a name="rule-digits"></a></p>
+
+<h4 id="digits:value">digits:<em>value</em></h4>
+
+<p>The field under validation must be <em>numeric</em> and must have an exact length of <em>value</em>.</p>
+
+<p><a name="rule-digits-between"></a></p>
+
+<h4 id="digits_between:min,max">digits_between:<em>min</em>,<em>max</em></h4>
+
+<p>The field under validation must have a length between the given <em>min</em> and <em>max</em>.</p>
+
+<p><a name="rule-email"></a></p>
+
+<h4 id="email">email</h4>
+
+<p>The field under validation must be formatted as an e-mail address.</p>
+
+<p><a name="rule-exists"></a></p>
+
+<h4 id="exists:table,column">exists:<em>table</em>,<em>column</em></h4>
+
+<p>The field under validation must exist on a given database table.</p>
+
+<h4 id="basic-usage-of-exists-rule">Basic Usage Of Exists Rule</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;state&#39; =&gt; &#39;exists:states&#39;
+</code></pre></div>
+<h4 id="specifying-a-custom-column-name">Specifying A Custom Column Name</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;state&#39; =&gt; &#39;exists:states,abbreviation&#39;
+</code></pre></div>
+<p>You may also specify more conditions that will be added as &quot;where&quot; clauses to the query:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;exists:staff,email,account_id,1&#39;
+</code></pre></div>
+<p>Passing <code>NULL</code> as a &quot;where&quot; clause value will add a check for a <code>NULL</code> database value:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;exists:staff,email,deleted_at,NULL&#39;
+</code></pre></div>
+<p><a name="rule-image"></a></p>
+
+<h4 id="image">image</h4>
+
+<p>The file under validation must be an image (jpeg, png, bmp, gif, or svg)</p>
+
+<p><a name="rule-in"></a></p>
+
+<h4 id="in:foo,bar,...">in:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must be included in the given list of values.</p>
+
+<p><a name="rule-integer"></a></p>
+
+<h4 id="integer">integer</h4>
+
+<p>The field under validation must have an integer value.</p>
+
+<p><a name="rule-ip"></a></p>
+
+<h4 id="ip">ip</h4>
+
+<p>The field under validation must be formatted as an IP address.</p>
+
+<p><a name="rule-max"></a></p>
+
+<h4 id="max:value">max:<em>value</em></h4>
+
+<p>The field under validation must be less than or equal to a maximum <em>value</em>. Strings, numerics, and files are evaluated in the same fashion as the <a href="#rule-size"><code>size</code></a> rule.</p>
+
+<p><a name="rule-mimes"></a></p>
+
+<h4 id="mimes:foo,bar,...">mimes:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The file under validation must have a MIME type corresponding to one of the listed extensions.</p>
+
+<h4 id="basic-usage-of-mime-rule">Basic Usage Of MIME Rule</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;photo&#39; =&gt; &#39;mimes:jpeg,bmp,png&#39;
+</code></pre></div>
+<p><a name="rule-min"></a></p>
+
+<h4 id="min:value">min:<em>value</em></h4>
+
+<p>The field under validation must have a minimum <em>value</em>. Strings, numerics, and files are evaluated in the same fashion as the <a href="#rule-size"><code>size</code></a> rule.</p>
+
+<p><a name="rule-not-in"></a></p>
+
+<h4 id="not_in:foo,bar,...">not_in:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must not be included in the given list of values.</p>
+
+<p><a name="rule-numeric"></a></p>
+
+<h4 id="numeric">numeric</h4>
+
+<p>The field under validation must have a numeric value.</p>
+
+<p><a name="rule-regex"></a></p>
+
+<h4 id="regex:pattern">regex:<em>pattern</em></h4>
+
+<p>The field under validation must match the given regular expression.</p>
+
+<p><strong>Note:</strong> When using the <code>regex</code> pattern, it may be necessary to specify rules in an array instead of using pipe delimiters, especially if the regular expression contains a pipe character.</p>
+
+<p><a name="rule-required"></a></p>
+
+<h4 id="required">required</h4>
+
+<p>The field under validation must be present in the input data.</p>
+
+<p><a name="rule-required-if"></a></p>
+
+<h4 id="required_if:field,value,...">required_if:<em>field</em>,<em>value</em>,...</h4>
+
+<p>The field under validation must be present if the <em>field</em> field is equal to any <em>value</em>.</p>
+
+<p><a name="rule-required-with"></a></p>
+
+<h4 id="required_with:foo,bar,...">required_with:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must be present <em>only if</em> any of the other specified fields are present.</p>
+
+<p><a name="rule-required-with-all"></a></p>
+
+<h4 id="required_with_all:foo,bar,...">required_with_all:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must be present <em>only if</em> all of the other specified fields are present.</p>
+
+<p><a name="rule-required-without"></a></p>
+
+<h4 id="required_without:foo,bar,...">required_without:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must be present <em>only when</em> any of the other specified fields are not present.</p>
+
+<p><a name="rule-required-without-all"></a></p>
+
+<h4 id="required_without_all:foo,bar,...">required_without_all:<em>foo</em>,<em>bar</em>,...</h4>
+
+<p>The field under validation must be present <em>only when</em> all of the other specified fields are not present.</p>
+
+<p><a name="rule-same"></a></p>
+
+<h4 id="same:field">same:<em>field</em></h4>
+
+<p>The given <em>field</em> must match the field under validation.</p>
+
+<p><a name="rule-size"></a></p>
+
+<h4 id="size:value">size:<em>value</em></h4>
+
+<p>The field under validation must have a size matching the given <em>value</em>. For string data, <em>value</em> corresponds to the number of characters. For numeric data, <em>value</em> corresponds to a given integer value. For files, <em>size</em> corresponds to the file size in kilobytes.</p>
+
+<p><a name="rule-string"></a></p>
+
+<h4 id="string:value">string:<em>value</em></h4>
+
+<p>The field under validation must be a string type.</p>
+
+<p><a name="rule-timezone"></a></p>
+
+<h4 id="timezone">timezone</h4>
+
+<p>The field under validation must be a valid timezone identifier according to the <code>timezone_identifiers_list</code> PHP function.</p>
+
+<p><a name="rule-unique"></a></p>
+
+<h4 id="unique:table,column,except,idcolumn">unique:<em>table</em>,<em>column</em>,<em>except</em>,<em>idColumn</em></h4>
+
+<p>The field under validation must be unique on a given database table. If the <code>column</code> option is not specified, the field name will be used.</p>
+
+<p>Occasionally, you may need to set a custom connection for database queries made by the Validator. As seen above, setting <code>unique:users</code> as a validation rule will use the default database connection to query the database. To override this, do the following:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$verifier = App::make(&#39;validation.presence&#39;);
+
+$verifier-&gt;setConnection(&#39;connectionName&#39;);
+
+$validator = Validator::make($input, [
+    &#39;name&#39; =&gt; &#39;required&#39;,
+    &#39;password&#39; =&gt; &#39;required|min:8&#39;,
+    &#39;email&#39; =&gt; &#39;required|email|unique:users&#39;,
+]);
+
+$validator-&gt;setPresenceVerifier($verifier);
+</code></pre></div>
+<h4 id="basic-usage-of-unique-rule">Basic Usage Of Unique Rule</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;unique:users&#39;
+</code></pre></div>
+<h4 id="specifying-a-custom-column-name">Specifying A Custom Column Name</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;unique:users,email_address&#39;
+</code></pre></div>
+<h4 id="forcing-a-unique-rule-to-ignore-a-given-id">Forcing A Unique Rule To Ignore A Given ID</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;unique:users,email_address,10&#39;
+</code></pre></div>
+<h4 id="adding-additional-where-clauses">Adding Additional Where Clauses</h4>
+
+<p>You may also specify more conditions that will be added as &quot;where&quot; clauses to the query:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;unique:users,email_address,NULL,id,account_id,1&#39;
+</code></pre></div>
+<p>In the rule above, only rows with an <code>account_id</code> of <code>1</code> would be included in the unique check.</p>
+
+<p><a name="rule-url"></a></p>
+
+<h4 id="url">url</h4>
+
+<p>The field under validation must be formatted as an URL.</p>
+
+<blockquote>
+<p><strong>Note:</strong> This function uses PHP&#39;s <code>filter_var</code> method.</p>
+</blockquote>
+
+<p><a name="conditionally-adding-rules"></a></p>
+
+<h2 id="conditionally-adding-rules">Conditionally Adding Rules</h2>
+
+<p>In some situations, you may wish to run validation checks against a field <strong>only</strong> if that field is present in the input array. To quickly accomplish this, add the <code>sometimes</code> rule to your rule list:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$v = Validator::make($data, [
+    &#39;email&#39; =&gt; &#39;sometimes|required|email&#39;,
+]);
+</code></pre></div>
+<p>In the example above, the <code>email</code> field will only be validated if it is present in the <code>$data</code> array.</p>
+
+<h4 id="complex-conditional-validation">Complex Conditional Validation</h4>
+
+<p>Sometimes you may wish to require a given field only if another field has a greater value than 100. Or you may need two fields to have a given value only when another field is present. Adding these validation rules doesn&#39;t have to be a pain. First, create a <code>Validator</code> instance with your <em>static rules</em> that never change:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$v = Validator::make($data, [
+    &#39;email&#39; =&gt; &#39;required|email&#39;,
+    &#39;games&#39; =&gt; &#39;required|numeric&#39;,
+]);
+</code></pre></div>
+<p>Let&#39;s assume our web application is for game collectors. If a game collector registers with our application and they own more than 100 games, we want them to explain why they own so many games. For example, perhaps they run a game re-sell shop, or maybe they just enjoy collecting. To conditionally add this requirement, we can use the <code>sometimes</code> method on the <code>Validator</code> instance.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$v-&gt;sometimes(&#39;reason&#39;, &#39;required|max:500&#39;, function($input)
+{
+    return $input-&gt;games &gt;= 100;
+});
+</code></pre></div>
+<p>The first argument passed to the <code>sometimes</code> method is the name of the field we are conditionally validating. The second argument is the rules we want to add. If the <code>Closure</code> passed as the third argument returns <code>true</code>, the rules will be added. This method makes it a breeze to build complex conditional validations. You may even add conditional validations for several fields at once:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$v-&gt;sometimes([&#39;reason&#39;, &#39;cost&#39;], &#39;required&#39;, function($input)
+{
+    return $input-&gt;games &gt;= 100;
+});
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> The <code>$input</code> parameter passed to your <code>Closure</code> will be an instance of <code>Illuminate\Support\Fluent</code> and may be used as an object to access your input and files.</p>
+</blockquote>
+
+<p><a name="custom-error-messages"></a></p>
+
+<h2 id="custom-error-messages">Custom Error Messages</h2>
+
+<p>If needed, you may use custom error messages for validation instead of the defaults. There are several ways to specify custom messages.</p>
+
+<h4 id="passing-custom-messages-into-validator">Passing Custom Messages Into Validator</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$messages = [
+    &#39;required&#39; =&gt; &#39;The :attribute field is required.&#39;,
+];
+
+$validator = Validator::make($input, $rules, $messages);
+</code></pre></div>
+<blockquote>
+<p><em>Note:</em> The <code>:attribute</code> place-holder will be replaced by the actual name of the field under validation. You may also utilize other place-holders in validation messages.</p>
+</blockquote>
+
+<h4 id="other-validation-place-holders">Other Validation Place-Holders</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$messages = [
+    &#39;same&#39;    =&gt; &#39;The :attribute and :other must match.&#39;,
+    &#39;size&#39;    =&gt; &#39;The :attribute must be exactly :size.&#39;,
+    &#39;between&#39; =&gt; &#39;The :attribute must be between :min - :max.&#39;,
+    &#39;in&#39;      =&gt; &#39;The :attribute must be one of the following types: :values&#39;,
+];
+</code></pre></div>
+<h4 id="specifying-a-custom-message-for-a-given-attribute">Specifying A Custom Message For A Given Attribute</h4>
+
+<p>Sometimes you may wish to specify a custom error messages only for a specific field:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$messages = [
+    &#39;email.required&#39; =&gt; &#39;We need to know your e-mail address!&#39;,
+];
+</code></pre></div>
+<p><a name="localization"></a></p>
+
+<h4 id="specifying-custom-messages-in-language-files">Specifying Custom Messages In Language Files</h4>
+
+<p>In some cases, you may wish to specify your custom messages in a language file instead of passing them directly to the <code>Validator</code>. To do so, add your messages to <code>custom</code> array in the <code>resources/lang/xx/validation.php</code> language file.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;custom&#39; =&gt; [
+    &#39;email&#39; =&gt; [
+        &#39;required&#39; =&gt; &#39;We need to know your e-mail address!&#39;,
+    ],
+],
+</code></pre></div>
+<p><a name="custom-validation-rules"></a></p>
+
+<h2 id="custom-validation-rules">Custom Validation Rules</h2>
+
+<h4 id="registering-a-custom-validation-rule">Registering A Custom Validation Rule</h4>
+
+<p>Laravel provides a variety of helpful validation rules; however, you may wish to specify some of your own. One method of registering custom validation rules is using the <code>Validator::extend</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Validator::extend(&#39;foo&#39;, function($attribute, $value, $parameters)
+{
+    return $value == &#39;foo&#39;;
+});
+</code></pre></div>
+<p>The custom validator Closure receives three arguments: the name of the <code>$attribute</code> being validated, the <code>$value</code> of the attribute, and an array of <code>$parameters</code> passed to the rule.</p>
+
+<p>You may also pass a class and method to the <code>extend</code> method instead of a Closure:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Validator::extend(&#39;foo&#39;, &#39;FooValidator@validate&#39;);
+</code></pre></div>
+<p>Note that you will also need to define an error message for your custom rules. You can do so either using an inline custom message array or by adding an entry in the validation language file.</p>
+
+<h4 id="extending-the-validator-class">Extending The Validator Class</h4>
+
+<p>Instead of using Closure callbacks to extend the Validator, you may also extend the Validator class itself. To do so, write a Validator class that extends <code>Illuminate\Validation\Validator</code>. You may add validation methods to the class by prefixing them with <code>validate</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php
+
+class CustomValidator extends Illuminate\Validation\Validator {
+
+    public function validateFoo($attribute, $value, $parameters)
+    {
+        return $value == &#39;foo&#39;;
+    }
+
+}
+</code></pre></div>
+<h4 id="registering-a-custom-validator-resolver">Registering A Custom Validator Resolver</h4>
+
+<p>Next, you need to register your custom Validator extension:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Validator::resolver(function($translator, $data, $rules, $messages)
+{
+    return new CustomValidator($translator, $data, $rules, $messages);
+});
+</code></pre></div>
+<p>When creating a custom validation rule, you may sometimes need to define custom place-holder replacements for error messages. You may do so by creating a custom Validator as described above, and adding a <code>replaceXXX</code> function to the validator.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">protected function replaceFoo($message, $attribute, $rule, $parameters)
+{
+    return str_replace(&#39;:foo&#39;, $parameters[0], $message);
+}
+</code></pre></div>
+<p>If you would like to add a custom message &quot;replacer&quot; without extending the <code>Validator</code> class, you may use the <code>Validator::replacer</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Validator::replacer(&#39;rule&#39;, function($message, $attribute, $rule, $parameters)
+{
+    //
+});
+</code></pre></div>
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+
+  </body>
+
+</html>
