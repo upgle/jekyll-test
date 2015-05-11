@@ -6,8 +6,8 @@
 </description>
     <link>http://www.xpressengine.com/jekyll-test//</link>
     <atom:link href="http://www.xpressengine.com/jekyll-test//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 May 2015 09:43:31 +0900</pubDate>
-    <lastBuildDate>Mon, 11 May 2015 09:43:31 +0900</lastBuildDate>
+    <pubDate>Mon, 11 May 2015 11:23:29 +0900</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 11:23:29 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -212,9 +212,9 @@ class ProfileComposer {
 &lt;p&gt;뷰 &lt;strong&gt;크리에이터&lt;/strong&gt;는 뷰 컴포저와 거의 비슷하게 동작합니다; 하지만 뷰 크리에이터는 뷰가 인스턴스화 되는 즉시 실행됩니다. 뷰 크리에이터를 등록하기 위해서는 &lt;code&gt;creator&lt;/code&gt; 메소드를 사용합니다:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;View::creator(&amp;#39;profile&amp;#39;, &amp;#39;App\Http\ViewCreators\ProfileCreator&amp;#39;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/views</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/views</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/views.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/views.html</guid>
         
         
         <category>5.0</category>
@@ -994,9 +994,9 @@ class CustomValidator extends Illuminate\Validation\Validator {
     //
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/validation</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/validation</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/validation.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/validation.html</guid>
         
         
         <category>5.0</category>
@@ -1389,9 +1389,9 @@ public function updateRememberToken(UserInterface $user, $token);
 
 &lt;p&gt;와일드 카드 이벤트 리스너는 더이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, &lt;code&gt;Event::firing()&lt;/code&gt; 를 사용하십시오.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/upgrade</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/upgrade</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/upgrade.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/upgrade.html</guid>
         
         
         <category>5.0</category>
@@ -1607,9 +1607,9 @@ $this-&amp;gt;seed($connection);
 
 &lt;p&gt;이미 알고 있다 시피 여러분은 테스트 메소드에서 &lt;code&gt;$this-&amp;gt;app&lt;/code&gt; 을 통해서 어플리케이션(&lt;a href=&quot;/docs/5.0/container&quot;&gt;서비스 컨테이너&lt;/a&gt;)에 엑세스 할 수 있습니다. 이 서비스 컨테이너 인스턴스는 각각의 테스트 클래스 마다 새로 고침됩니다. 만약 여러분이 수동으로 어플리케이션을 새로고침 하고 싶은 경우에는 테스트 메소드에서 &lt;code&gt;refreshApplication&lt;/code&gt; 메소드를 사용하면 됩니다. 이렇게 하면 테스트 케이스가 실행을 시작한 이후 IoC 컨테이너에 등록된 mock 객체와 추가적인 바인딩을 재설정 할것입니다. &lt;/p&gt;
 </description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/testing</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/testing</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/testing.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/testing.html</guid>
         
         
         <category>5.0</category>
@@ -1753,9 +1753,9 @@ The current UNIX timestamp is {{ time() }}.
 &lt;h4 id=&quot;주석&quot;&gt;주석&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{{-- This comment will not be in the rendered HTML --}}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/templates</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/templates</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/templates.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/templates.html</guid>
         
         
         <category>5.0</category>
@@ -1832,9 +1832,9 @@ The current UNIX timestamp is {{ time() }}.
 &lt;p&gt;앞서 이야기한대로 어플리케이션의 네임스페이스는 기본값으로 &lt;code&gt;App&lt;/code&gt;으로 지정되어 있습니다. 하지만 이 네임스페이스를 여러분이 고유한 값으로 변경하고자 한다면 &lt;code&gt;app:name&lt;/code&gt; 아티즌 명령어를 통해서 손쉽게 할 수 있습니다. 예를들어 어플리케이션이 “SocialNet”으로 이름을 지정하고자 한다면 다음과 같이 명령어를 실행하면 됩니다:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;php artisan app:name SocialNet
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/structure</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/structure</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/structure.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/structure.html</guid>
         
         
         <category>5.0</category>
@@ -1967,9 +1967,9 @@ php artisan migrate
 &lt;p&gt;&lt;strong&gt;주의:&lt;/strong&gt; 배열 드라이버의 경우에는 실제로 세션은 유지되지 않기 때문에 &lt;a href=&quot;/docs/5.0/testing&quot;&gt;unit tests&lt;/a&gt;를 수행하는데에만 사용하시기 바랍니다. &lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/session</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/session</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/session.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/session.html</guid>
         
         
         <category>5.0</category>
@@ -2223,9 +2223,9 @@ $table-&amp;gt;foreign(&amp;#39;user_id&amp;#39;)-&amp;gt;references(&amp;#39;id
     $table-&amp;gt;string(&amp;#39;email&amp;#39;);
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/schema</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/schema</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/schema.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/schema.html</guid>
         
         
         <category>5.0</category>
@@ -2593,9 +2593,9 @@ $redirect = redirect()-&amp;gt;route(&amp;#39;profile&amp;#39;);
 
 &lt;p&gt;404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 &lt;a href=&quot;/docs/5.0/errors#http-exceptions&quot;&gt;errors&lt;/a&gt; 부분을 참조하십시오.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/routing</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/routing</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/routing.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/routing.html</guid>
         
         
         <category>5.0</category>
@@ -2771,9 +2771,9 @@ class ResponseMacroServiceProvider extends ServiceProvider {
 &lt;p&gt;&lt;code&gt;macro&lt;/code&gt; 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 &lt;code&gt;response&lt;/code&gt; 헬퍼 함수를 통해서 &lt;code&gt;ResponseFactory&lt;/code&gt; 구현 객체에서 호출될것 입니다. &lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;return response()-&amp;gt;caps(&amp;#39;foo&amp;#39;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
-        <link>http://www.xpressengine.com/jekyll-test//docs/5.0/responses</link>
-        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//docs/5.0/responses</guid>
+        <pubDate>Mon, 11 May 2015 00:00:00 +0900</pubDate>
+        <link>http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/responses.html</link>
+        <guid isPermaLink="true">http://www.xpressengine.com/jekyll-test//5.0/2015/05/11/responses.html</guid>
         
         
         <category>5.0</category>
