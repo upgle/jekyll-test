@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>라라벨 한국어 매뉴얼</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/jekyll-test/js/prism.js"></script>
+
+  <link rel="stylesheet" href="/jekyll-test/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/jekyll-test//">
+  <link rel="alternate" type="application/rss+xml" title="라라벨 한국어 매뉴얼" href="http://www.xpressengine.com/jekyll-test//feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo">Laravel korean docs <small>laravel 한글 매뉴얼</small></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/jekyll-test//img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/jekyll-test//img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/jekyll-test//img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/jekyll-test//img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/jekyll-test//img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/docs/5.0/configuration">설정</a></li>
+            <li><a href="/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/docs/5.0/requests">Requests</a></li>
+            <li><a href="/docs/5.0/responses">Responses</a></li>
+            <li><a href="/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/docs/5.0/facades">파사드</a></li>
+            <li><a href="/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/docs/5.0/authentication">인증</a></li>
+            <li><a href="/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/docs/5.0/cache">캐시</a></li>
+            <li><a href="/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/docs/5.0/events">이벤트</a></li>
+            <li><a href="/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/docs/5.0/hashing">해시</a></li>
+            <li><a href="/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/docs/5.0/mail">메일</a></li>
+            <li><a href="/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/docs/5.0/queues">큐</a></li>
+            <li><a href="/docs/5.0/session">세션</a></li>
+            <li><a href="/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/views.html">뷰(Views)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/validation.html">Validation</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/upgrade.html">업그레이드 가이드(Upgrade Guide)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/testing.html">테스팅(Testing)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/templates.html">템플릿(Templates)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/structure.html">어플리케이션 구조(Application Structure)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/session.html">세션(Session)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/schema.html">스키마 빌더(Schema Builder)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/routing.html">HTTP 라우팅(HTTP Routing )</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/responses.html">HTTP Responses</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/requests.html">HTTP Requests</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/releases.html">Release Notes</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/redis.html">레디스(Redis)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/readme.html">Laravel Documentation</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/queues.html">큐(Queues)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/queries.html">쿼리빌더(Query Builder)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/providers.html">서비스 프로바이더(Service Providers)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/pagination.html">페이지네이션(Pagination)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/packages.html">패키지 개발(Package Development)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/migrations.html">마이그레이션 & 시딩(Migrations & Seeding)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/middleware.html">HTTP 미들웨어(HTTP Middleware)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/mail.html">메일(Mail)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/localization.html">지역화 (다국어-Localization)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/lifecycle.html">요청에 대한 라이프사이클(Request Lifecycle)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//2015/05/11/license.html">License</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/installation.html">설치하기(Installation)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/homestead.html">라라벨 홈스테드(Laravel Homestead)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/helpers.html">Helper Functions 헬퍼 함수</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/hashing.html">해시(Hashing)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/filesystem.html">파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/facades.html">파사드(Facades)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/extending.html">프레임워크의 확장(Extending The Framework)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/events.html">이벤트(Events)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/errors.html">에러와 로깅(Errors & Logging)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/envoy.html">Envoy(Envoy Task Runner)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/encryption.html">암호화(Encryption)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/eloquent.html">Eloquent ORM</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/elixir.html">라라벨 엘릭서(Laravel Elixir)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//2015/05/11/documentation.html">Documentation</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/database.html">기본적인 데이터 베이스 사용법(Basic Database Usage)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/controllers.html">HTTP 컨트롤러(HTTP Controllers)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/contributions.html">기여 가이드(Contribution Guide)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/contributing.html">기여 가이드라인(Contribution Guidelines)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/contracts.html">Contracts</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/container.html">서비스 컨테이너(Service Container)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/configuration.html">설정(Configuration)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/commands.html">아티즌 명령어 개발하기(Artisan Development)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/collections.html">컬렉션(Collections)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/cache.html">캐시(Cache)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/bus.html">커맨드 버스(Command Bus)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/billing.html">라라벨 캐셔(Laravel Cashier)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/authentication.html">인증 (Authentication)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll-test//5.0/2015/05/11/artisan.html">아티즌 CLI(Artisan CLI)</a>
+        </h2>
+      </li>
+    
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="/jekyll-test//feed.xml">via RSS</a></p>
+
+</div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+
+  </body>
+
+</html>
